@@ -1,4 +1,4 @@
-# ++Bolo de Chocolate++
+# Bolo de Chocolate
 ## Receita de um bolo de chocolate 🎂
 
 ### Ingreditentes
