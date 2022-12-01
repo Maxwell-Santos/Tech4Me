@@ -24,7 +24,7 @@ a{
 .contentLinks{
   margin: 0 auto;
   width: 100%;
-  height: calc(100vh - 68px); /*Toda a altura da tela menos a altura do título, fiz isso para que não tenha scroll desnecessário */
+  height: calc(100vh - 108px); /*Toda a altura da tela menos a altura do título, fiz isso para que não tenha scroll desnecessário */
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -86,9 +86,10 @@ a{
   }
 
   .contentLinks{
-    margin-top: 10px; 
+    /* margin-top: 20px;  */
     margin-bottom: 10px; 
   }
+
   .container{
     margin-bottom: 20px;
     overflow: visible;
@@ -107,7 +108,11 @@ a{
     padding: 20px;
   }
 
-.container .info ul li{
-  line-height: 20px;
-}
+  .container .info ul li{
+    line-height: 20px;
+  }
+
+  .container:hover img {
+    transform: none;
+  }
 }

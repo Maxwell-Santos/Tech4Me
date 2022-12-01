@@ -24,6 +24,7 @@
       font-family: sans-serif;
       font-size: 17px;
 
+      background-color: #0000000c;
     }
 
     dl {
@@ -34,37 +35,42 @@
     }
 
     dl div {
-      background-color: var(--color);
+      background-color: var(--bg-card);
       border-radius: 5px;
       overflow: hidden;
       margin: 10px;
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
     }
 
     dl dt {
       background-color: rgba(0, 0, 0, 0.2);
       color: white;
-      font-weight: 700;
-      padding: 10px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      padding: 10px 40px;
       margin-top: 20px;
+      font-size: 1.3em;
     }
 
     dl dd {
-      padding: 10px;
+      padding: 15px;
     }
 
     dl dd ul li {
       margin-top: 10px;
-      /* color: rgba(0, 0, 0, 0.719) */
     }
 
-    dl dd ul li span{
+    dl dd ul li span {
       font-size: 15px;
       color: rgba(0, 0, 0, 0.767);
     }
 
+    ul li h4{
+      color: rgba(0, 0, 0, 0.781);
+    }
   </style>
   <dl>
-    <div style="--color:rgba(0, 255, 0, 0.397);">
+    <div style="--bg-card:rgba(0, 255, 0, 0.397);">
       <dt>USP</dt>
       <dd>
         <ul>
@@ -84,8 +90,8 @@
       </dd>
     </div>
 
-    <div style="--color:rgba(0, 68, 255, 0.363);">
-      <dt>Cruzeiro do SUL</dt>
+    <div style="--bg-card:rgba(0, 54, 201, 0.5);">
+      <dt>Cruzeiro do Sul</dt>
       <dd>
         <ul>
           <li>
@@ -104,7 +110,7 @@
       </dd>
     </div>
 
-    <div style="--color:rgba(255, 0, 0, 0.486);">
+    <div style="--bg-card:rgba(212, 0, 0, 0.671);">
 
       <dt>FIAP</dt>
       <dd>
