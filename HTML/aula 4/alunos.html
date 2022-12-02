@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastrar alunos</title>
+</head>
+
+<body>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      width: 100%;
+      height: 100vh;
+      display: grid;
+      place-items: center;
+
+      font-family: sans-serif;
+    }
+
+    table{
+      border: 1px solid rgba(0, 0, 0, 0.377);
+      border-collapse: collapse;
+      width: 400px;
+      margin-top: 20px;
+      
+    }
+
+    table th{
+      border: 1px solid rgba(0, 0, 0, 0.377);
+      padding: 10px;
+
+    }
+
+    table td{
+      padding: 5px;
+    }
+
+    table tbody tr:nth-child(odd){
+      background-color: #37ff5c34;
+    }
+
+    table tbody tr{
+      padding: 10px;
+    }
+    .container{
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .inpt {
+      display: block;
+      margin-top: 20px;
+    }
+
+    .formAluno {
+      padding: 20px;
+      border-radius: 10px;
+      width: 400px;
+    }
+
+    .formAluno h1 {
+      text-align: center;
+      font-weight: 500;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid rgb(151, 151, 151);
+      margin-top: 5px;
+      width: 100%;
+
+      outline: none;
+    }
+
+    input[type="text"]:focus,
+    input[type="number"]:focus {
+      border: 1px solid #285430;
+      background-color: #77ff903a;
+    }
+
+    input[type="text"]:hover,
+    input[type="number"]:hover {
+      border: 1px solid #285430;
+    }
+
+    .sexo {
+      /* background-color: red;  */
+      padding: 20px 0px;
+    }
+
+    .sexo h3 {
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    .sexo input{
+      accent-color: #285430;
+    }
+
+    .enviar {
+      padding: 10px 15px;
+      margin-left: auto;
+      display: block;
+      border-radius: 30px;
+      border: none;
+      background-color: #285430;
+      color: white;
+      border: 1px solid #285430;
+      
+      cursor: pointer;
+      transition: all ease .3s;
+      text-transform: uppercase;
+    }
+
+    .enviar:hover{
+      background-color: transparent;
+      color: #285430;
+    }
+  </style>
+
+
+<div class="container">
+  <!-- tabela de alunos -->
+    <div>
+      <table>
+        <caption>Alunos Tech4Me</caption>
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Idade</th>
+          </tr>
+        </thead>
+  
+        <tbody>
+          <tr>
+            <td>Ana Macedo</td>
+            <td>16</td>
+          </tr>
+          <tr>
+            <td>Alex Murtha</td>
+            <td>22</td>
+          </tr>
+          <tr>
+            <td>Aline Ribeiro</td>
+            <td>21</td>
+          </tr>
+          <tr>
+            <td>Brayan</td>
+            <td>16</td>
+          </tr>
+          <tr>
+            <td>Brian Olieveira</td>
+            <td>16</td>
+          </tr>
+          <tr>
+            <td>Karine Reis</td>
+            <td>21</td>
+          </tr>
+          <tr>
+            <td>Felipe</td>
+            <td>20</td>
+          </tr>
+          <tr>
+            <td>Laisa Matos</td>
+            <td>18</td>
+          </tr>
+  
+          <tr>
+            <td>Maxwell Santos</td>
+            <td>18</td>
+          </tr>
+          <tr>
+            <td>Nicolas Baran</td>
+            <td>18</td>
+          </tr>
+          <tr>
+            <td>Rebeca Francklin</td>
+            <td>18</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+    <div class="formAluno">
+      <h1>Cadastrar Aluno</h1>
+      <form action="http://localhost:5500/teste" method="get">
+  
+        <label for="name" class="inpt">Nome</label>
+        <input id="name" type="text" name="nome" placeholder="Digite seu nome" required>
+  
+        <label for="idade" class="inpt">Idade</label>
+        <input id="idade" type="number" name="idade" placeholder="Digite sua idade" required>
+  
+        <div class="sexo">
+          <h3>Sexo</h3>
+          <input id="femi" type="radio" name="sexo" value="feminino">
+          <label for="femi" style="margin-right: 20px;">Feminino</label>
+
+          <input id="masc" type="radio" name="sexo" value="masculino" checked>
+          <label for="masc">Masculino</label>
+  
+        </div>
+  
+        <button type="submit" class="enviar">Matricular</button>
+      </form>
+    </div>
+</div>
+</body>
+
+</html>
