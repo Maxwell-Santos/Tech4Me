@@ -22,7 +22,6 @@ a{
   display: block;
 }
 .contentLinks{
-  margin: 0 auto;
   width: 100%;
   height: calc(100vh - 108px); /*Toda a altura da tela menos a altura do título, fiz isso para que não tenha scroll desnecessário */
   display: flex;
@@ -32,7 +31,7 @@ a{
 }
 
 .container {
-  max-width: 450px;
+  max-width: 440px;
   height: 300px;
   overflow: hidden;
   flex: 1;
@@ -114,5 +113,12 @@ a{
 
   .container:hover img {
     transform: none;
+  }
+}
+
+@media (min-width: 1800px){
+  .container{
+    max-width: 550px;
+    height: 400px;
   }
 }
