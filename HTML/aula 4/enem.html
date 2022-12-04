@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,700&display=swap" rel="stylesheet">
+  <title>Estudando para o ENEM</title>
+</head>
+
+<body>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: 'Lato', sans-serif;
+    }
+
+    body {
+      width: 100%;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      font-size: 18px;
+      background-color: #1B2430;
+      color: white;
+    }
+
+    form {
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      margin-top: 20px;
+      text-align: center;
+    }
+    .enunciado {
+      padding: 20px;
+      margin: 10px 0px;
+      width: 100%;
+      max-width: 800px;
+      color: rgba(255, 255, 255, 0.822);
+      border-radius: 10px;
+    }
+
+    .enunciado p {
+      line-height: 1.4em;
+    }
+
+    .enunciado .questao {
+      margin: 20px 0px 10px;
+    }
+
+    .enunciado ul li {
+      list-style: none;
+      margin: 8px 0px;
+
+      background-color: #51557E;
+      border-radius: 10px;
+      padding: 0px 10px;
+      display: flex;
+
+      transition: all ease .2s;
+    }
+
+    .enunciado ul li:has(input[type="radio"]:checked ) {
+      /* se o input dentro do li estiver checked, aplicar esse estilo */
+      background-color: #150050;
+    }
+
+    .enunciado ul li input[type="radio"] {
+      appearance: none;
+    }
+
+    .enunciado ul li label {
+      padding: 12px;
+
+      display: block;
+      flex: 1;
+      cursor: pointer;
+
+      user-select: none;
+    }
+    .enunciado ul li label span{
+      margin-right: 5px;
+    }
+
+    .enunciado ul li:hover {
+      transform: scale(1.030);
+      background-color: #1500505b;
+
+    }
+
+    .acoes {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 0px 20px;
+    }
+
+    .enviar,
+    .resetar {
+      display: block;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid;
+      color: white;
+      cursor: pointer;
+      transition: all ease .3s;
+      font-size: .9em;
+
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .enviar {
+      background-color: #270082;
+      cursor: pointer;
+      border: 2px solid #270082;
+    }
+    .enviar:hover{
+      background-color: #200168;
+    }
+
+    .resetar {
+      border: 2px solid #950101;
+      background: transparent;
+    }
+    .resetar:hover{
+      color: #FF0000;
+    }
+
+    @media (max-width: 500px){
+      .acoes{
+        justify-content: center;
+      }
+    }
+
+  </style>
+
+  <h1>Questões do ENEM - 2017</h1>
+  <form action="" method="post">
+    <ol>
+
+      <li>
+        <!-- Língua Portuguesa -->
+        <div class="enunciado">
+          <p>
+            João/Zero (Wagner Moura) é um cientista genial, mas infeliz porque há 20 anos atrás foi humilhado
+            publicamente
+            durante uma festa e perdeu Helena (Alinne Moraes), uma antiga e eterna paixão. Certo dia, uma experiência
+            com um
+            de seus inventos permite que ele faça uma viagem no tempo, retornando para aquela época e podendo interferir
+            no
+            seu destino. Mas quando ele retorna, descobre que sua vida mudou totalmente e agora precisa encontrar um
+            jeito
+            de
+            mudar essa história, nem que para isso tenha que voltar novamente ao passado. Será que ele conseguirá
+            acertar as
+            coisas?
+          </p>
+          <p class="questao">
+            Qual aspecto da organização gramatical atualiza os eventos apresentados na resenha, contribuindo para
+            despertar
+            o
+            interesse do leitor pelo filme?
+          </p>
+
+          <ul>
+            <li>
+              <input id="resp1Q1" type="radio" value="errado" name="q1" required>
+              <label for="resp1Q1">
+                <span>A )</span> O emprego do verbo haver, em vez de ter, em “há 20 anos atrás foi humilhado”.
+              </label>
+            </li>
+            <li>
+              <!-- correto -->
+              <input id="resp2Q1" type="radio" value="correto" name="q1" required>
+              <label for="resp2Q1">
+                <span>B )</span> A descrição dos fatos com verbos no presente do indicativo, como “retorna” e “descobre”.
+              </label>
+            </li>
+            <li>
+              <input id="resp3Q1" type="radio" value="errado" name="q1" required>
+              <label for="resp3Q1"><span>C )</span> A repetição do emprego da conjunção “mas” para contrapor ideias.</label>
+            </li>
+            <li>
+              <input id="resp4Q1" type="radio" value="errado" name="q1" required>
+              <label for="resp4Q1">
+                <span>D )</span> A finalização do texto com a frase de efeito “Será que ele conseguirá acertar as coisas?”.
+              </label>
+            </li>
+          </ul>
+        </div>
+      </li>
+
+      <li>
+        <!-- Ciências humanas e suas tecnologias -->
+        <div class="enunciado">
+          <p>
+            Mas era sobretudo a lã que os compradores, vindos de Flandres ou da Itália, procuravam por toda a parte.
+            Para
+            satisfazê-los, as raças foram melhoradas através do aumento progressivo das suas dimensões. Esse crescimento
+            prosseguiu durante todo o século XIII, e as abadias da Ordem de Cister, onde eram utilizados os métodos mais
+            racionais de criação de gado, desempenharam certamente um papel determinante nesse aperfeiçoamento.
+          </p>
+          <p class="questao">
+            O texto aponta para a redação entre aperfeiçoamento da atividade pastoril e avanço técnico na Europa
+            ocidental
+            feudal, que resultou do(a )
+          </p>
+
+          <ul>
+            <li>
+              <input id="resp1Q2" type="radio" value="errado" name="q2" required>
+              <label for="resp1Q2"><span>A )</span> crescimento do trabalho escravo.</label>
+            </li>
+
+            <li>
+              <!-- correto -->
+              <input id="resp2Q2" type="radio" value="correto" name="q2" required>
+              <label for="resp2Q2"><span>B )</span> desenvolvimento da vida urbana.</label>
+            </li>
+
+            <li>
+              <input id="resp3Q2" type="radio" value="errado" name="q2" required>
+              <label for="resp3Q2"><span>C )</span> padronização dos impostos locais.</label>
+            </li>
+
+            <li>
+              <input id="resp4Q2" type="radio" value="errado" name="q2" required>
+              <label for="resp4Q2"><span>D )</span> uniformização do processo produtivo.</label>
+            </li>
+          </ul>
+        </div>
+      </li>
+
+      <li>
+        <!-- Geografia -->
+        <div class="enunciado">
+          <p>
+            A instalação de uma refinaria obedece a diversos fatores técnicos. Um dos mais importantes é a localização,
+            que
+            deve ser próxima tanto dos centros de consumo como das áreas de produção. A Petrobras possui refinarias
+            estrategicamente distribuídas pelo país. Elas são responsáveis pelo processamento de milhões de barris de
+            petróleo por dia, suprindo o mercado com derivados que podem ser obtidos a partir de petróleo nacional ou
+            importado.
+          </p>
+          <p class="questao">
+            A territorialização de uma unidade produtiva depende de diversos fatores locacionais. A partir da leitura do
+            texto, o fator determinante para a instalação das refinarias de petróleo é a proximidade a
+          </p>
+
+          <ul>
+            <li>
+              <input id="resp1Q3" type="radio" value="errado" name="q3" required>
+              <label for="resp1Q3"><span>A )</span> sedes de empresas petroquímicas.</label>
+            </li>
+
+            <li>
+              <input id="resp2Q3" type="radio" value="errado" name="q3" required>
+              <label for="resp2Q3"><span>B )</span> zonas de importação de derivados.</label>
+            </li>
+
+            <li>
+              <input id="resp3Q3" type="radio" value="errado" name="q3" required>
+              <label for="resp3Q3"><span>C )</span> polos de desenvolvimento tecnológico.</label>
+            </li>
+
+            <li>
+              <!-- correto -->
+              <input id="resp4Q3" type="radio" value="correto" name="q3" required>
+              <label for="resp4Q3"><span>D )</span>  espaços com infraestrutura de circulação.</label>
+            </li>
+          </ul>
+        </div>
+      </li>
+
+      <li>  
+        <!-- Sociologia -->
+        <div class="enunciado">
+          <p>
+            Muitos países se caracterizam por terem populações multiétnicas. Com frequência, evoluíram desse modo ao
+            longo
+            de séculos. Outras sociedades se tornaram multiétnicas mais rapidamente, como resultado de políticas
+            incentivando a migração, ou por conta de legados coloniais e imperiais.
+          </p>
+          <p class="questao">
+            Do ponto de vista do funcionamento das democracias contemporâneas, o modelo de de sociedade descrito
+            demanda,
+            simultaneamente,
+          </p>
+
+          <ul>
+            <li>
+              <input id="resp1Q4" type="radio" value="errado" name="q4" required>
+              <label for="resp1Q4"><span>A )</span> defesa do patriotismo e rejeição ao hibridismo.</label>
+            </li>
+
+            <li>
+              <!-- correto -->
+              <input id="resp2Q4" type="radio" value="correto" name="q4" required>
+              <label for="resp2Q4"><span>B )</span> universalização de direitos e respeito à diversidade.</label>
+            </li>
+
+            <li>
+              <input id="resp3Q4" type="radio" value="errado" name="q4" required>
+              <label for="resp3Q4"><span>C )</span> segregação do território e estímulo ao autogoverno.</label>
+            </li>
+
+            <li>
+              <input id="resp4Q4" type="radio" value="errado" name="q4" required>
+              <label for="resp4Q4"><span>D )</span> políticas de compensação e homogeneização do idioma.</label>
+            </li>
+          </ul>
+        </div>
+      </li>
+
+      <li>
+        <!-- Biologia -->
+        <div class="enunciado">
+          <p>
+            Uma grande virada na moderna história da agricultura ocorreu depois da Segunda Guerra Mundial. Após a
+            guerra, os
+            governos haviam se deparado com um enorme excedente de nitrato de amônio, ingrediente usado na fabricação de
+            explosivos. A partir daí as fábricas de munição foram adaptadas para começar a produzir fertilizantes tendo
+            como
+            componente principal os nitratos.
+          </p>
+          <p class="questao">
+            No ciclo natural do nitrogênio, o equivalente ao principal componente desses fertilizantes industriais é
+            produzido na etapa de
+          </p>
+
+          <ul>
+            <li>
+              <!-- correto -->
+              <input id="resp1Q5" type="radio" value="correto" name="q5" required>
+              <label for="resp1Q5"><span>A )</span> nitratação.</label>
+            </li>
+
+            <li>
+              <input id="resp2Q5" type="radio" value="errado" name="q5" required>
+              <label for="resp2Q5"><span>B )</span> nitrosação.</label>
+            </li>
+
+            <li>
+              <input id="resp3Q5" type="radio" value="errado" name="q5" required>
+              <label for="resp3Q5"><span>C )</span> amonificação.</label>
+            </li>
+
+            <li>
+              <input id="resp4Q5" type="radio" value="errado" name="q5" required>
+              <label for="resp4Q5"><span>D )</span> desnitrificação.</label>
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ol>
+
+
+    <div class="acoes">
+      <button type="reset" class="resetar">Limpar Questões</button>
+      <button type="submit" class="enviar">Enviar minhas respostas</button>
+    </div>
+  </form>
+</body>
+
+</html>

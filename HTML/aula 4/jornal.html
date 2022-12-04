@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jornal</title>
+</head>
+
+<body>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+      
+    body{
+      width:100%;
+      min-height:100vh;
+      display: grid;
+      place-items: center;
+      font-size: 18px;
+      background-color: #e8f3d6a6;
+    }
+
+    .jornal{
+      display: flex;
+      gap: 50px;
+      flex-wrap: wrap;
+      flex-direction: column;
+      max-width: 800px;
+      width: 100%;
+      padding: 20px;
+    }
+
+    .jornal div{
+      flex:1;
+    }
+    
+    .jornal div h2{
+      margin-bottom: 20px;
+      color: #2B3A55;
+    }
+
+    .jornal div p{
+      text-align: justify;
+      color: #2B3A55;
+      line-height: 1.4em;
+    }
+
+    .jornal span{
+      background: #2b3a5552;
+      padding: 0px 5px;
+    }
+
+    </style>
+
+  <div class="jornal">
+
+    <div class="feed1">
+      <h2>Conselho aprova e gigante brasileiro pode ter nova arena</h2>
+      <div>
+        <p>
+          Mesmo não ganhando nem um título e sem conseguir se classificar para a <span>Libertadores 2023</span>. O torcedor <span>santista</span>
+          pode ter motivos para ficar <span>feliz</span>.
+        </p>
+        <p>
+          Isso por que o conselho deliberativo do clube aprovou na noite dessa quinta-feira (1) por votação que a
+          constituição de parceria para a <span>construção da arena Vila Belmiro</span>. Desse modo, o projeto terá continuação com uma
+          parceria entre o clube e a <span>empresa WTorre</span>.
+        </p>
+      </div>
+    </div>
+
+    <div class="feed2">
+      <h2>Infectologista faz alerta para quem não tomou a vacina contra a covid-19</h2>
+      <div>
+        <p>
+          Também ligado a falta de preocupação da população a não fazer o uso de <span>máscaras</span>, o especialista faz um alerta
+          para aquelas pessoas que não tomaram a dose de reforço. "Isso contribui para este cenário". Quem tomou a quarta
+          dose tem <span>3 vezes menos chances de ser hospitalizado</span> do que quem não tomou ", explicou. Mirian também fala dos
+          resultados que a vacina trouxe durante o período pandêmico: "Está fazendo o serviço esperado", já que
+          proporcionalmente o número de mortos caiu entre o ano de 2020 a 2021.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</body>
+
+</html>
