@@ -8,4 +8,4 @@ A Proposta era usar o que aprendemos nesse módulo de HTML para montar um portf�
 
 <p>Não foi um projeto muito difícil de fazer, mas confesso que nunca desenvolvi um html tão semântico, e eu gostei bastante do resultado</p>
 
-![Print](./img/print.png)
+<img src="./img/maxwell.gif" alt="video projeto" />
