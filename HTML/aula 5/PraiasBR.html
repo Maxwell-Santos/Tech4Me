@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Praias no Brasil</title>
+
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      width: 100%;
+      font-family: sans-serif;
+      background-color: #FFFBE9;
+    }
+
+    img {
+      width: 100%;
+      max-width: 600px;
+      height: 100%;
+      max-height: 600px;
+      object-fit: cover;
+      border-radius: 20px;
+      margin: 10px 0px;
+    }
+
+    header{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      background-color: #FFFBE9;
+
+
+    }
+    header nav{
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+    header nav a{
+      text-decoration: none;
+      font-weight: 600;
+      letter-spacing: 1px;
+      color: rgb(0, 61, 173);
+    }
+    
+    main {
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      margin-top: 70px;
+    }
+
+    .praia {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 70px;
+      background-color: #fff;
+      padding: 20px 30px 20px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    }
+
+    .praia h3 {
+      font-size: 1.5em
+    }
+
+    .praia p{
+      line-height: 1.4em;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Praias no Brasil</h1>
+    <nav>
+      <a href="#nordeste">Nordeste</a>
+      <a href="#sudeste">Sudeste</a>
+      <a href="#sul">Sul</a>
+    </nav>
+  </header>
+  
+
+
+  <main>
+    <articles id="nordeste" class="praia">
+      <h3>Canoa Quebrada - Ceará</h3>
+      <img src="https://www.viagensecaminhos.com/wp-content/uploads/2013/02/praia-canoa-quebrada-ceara.jpg"
+        alt="Praia Canoa Quebrada CE">
+
+      <p>
+        Canoa Quebrada é uma praia localizada no litoral leste do Estado do Ceará, Distante 163 km de Fortaleza e 12 km
+        da
+        sede do município de Aracati, à qual pertence. A sua paisagem é caracterizada por dunas e falésias avermelhadas
+        de
+        até trinta metros acima do nível do mar
+      </p>
+    </articles>
+
+    <articles id="sudeste" class="praia">
+      <h3>Guarujá - São Paulo</h3>
+      <img src="https://www.viagensecaminhos.com/wp-content/uploads/2012/02/guaruja-sao-paulo.jpg"
+        alt="Praia Guarujá SP">
+
+      <p>
+        Guarujá é uma cidade costeira brasileira perto de São Paulo e conhecida pelas suas inúmeras praias. A longa e
+        arenosa Praia da Enseada é onde se encontra o aquário Acqua Mundo, que possui tubarões e pinguins. A sudoeste,
+        ao
+        longo da costa, a Praia do Tombo conta com uma forte rebentação de ondas. Nas colinas sobre a linha costeira
+        encontram-se os túneis da Segunda Guerra Mundial do Forte dos Andradas. A Fortaleza da Barra, perto da foz do
+        Estuário de Santos, foi construída no século XVI para proteção contra os piratas.
+      </p>
+    </articles>
+
+    <articles id="sul" class="praia">
+      <h3>Prainha da Barra da Lagoa - Santa Catarina</h3>
+      <img src="https://levenaviagem.com.br/wp-content/uploads/2020/10/praias-do-sul-do-brasil-florianopolis.jpg"
+        alt="Praia Canoa Quebrada">
+
+      <p>
+        Na Prainha da Barra da Lagoa você consegue se conectar com você mesmo. Ideal para quem está em busca de paz e de
+        natureza e de ficar longe do estresse do dia a dia.
+
+        Como já falei, pelo caminho da praia você vai encontrar pequenos comércios, casas e hotéis. Então pode passar o
+        dia por lá, que será possível comprar coisas para comer, explorar os costumes das redondezas, conversar com os
+        habitantes do local e etc.
+      </p>
+    </articles>
+  </main>
+
+  <footer>Algumas praias da costa brasileira</footer>
+
+</body>
+
+</html>

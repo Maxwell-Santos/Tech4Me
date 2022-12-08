@@ -1,0 +1,97 @@
+/* Importação de fontes e configurações padrões estão nesse arquivo base.css */
+@import './base.css';
+
+.curriculo {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+
+  padding: 20px 30px;
+  background-color: rgba(0, 0, 0, 0.144);
+  color: rgba(255, 255, 255, 0.849);
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.perfil {
+  width: 250px;
+  border-radius: 50%;
+}
+
+.dadosPessoais {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap-reverse;
+  gap: 5rem;
+}
+
+.redesSociais{
+  width: 350px;
+}
+.redesSociais a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 10px 0px;
+  background-color: rgba(255, 255, 255, 0.336);
+  border-top: 1px solid rgba(255, 255, 255, 0.336);
+  padding: 10px;
+  width: 100%;
+  border-radius: .5rem;
+  color: #fff;
+  transition: all ease .3s;
+}
+.redesSociais a:hover {
+  background-color: rgba(255, 255, 255, 0.466);
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  object-fit: fill;
+}
+
+caption{
+  font-size: 1.2em;
+  margin-bottom: 1rem;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 5rem 0px;
+  border-radius: 20px;
+}
+table tr, th, td {
+  border: 1px solid rgba(255, 255, 255, 0.952);
+  padding: 15px;
+}
+
+table tr:nth-child(even){
+  background-color: #f1f1f111;
+}
+
+.stacks{
+  margin-bottom: 2rem;
+}
+.stacks h3 {
+  text-align: center;
+  font-size: 1.4em;
+}
+.stacks ol li{
+  margin: 20px 0px 0px 22px;
+  font-size: 1.2em;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+.stacks ol li h3{
+  font-weight: 500;
+}
+.stacks ol li p{
+  margin-top: 10px
+  
+}

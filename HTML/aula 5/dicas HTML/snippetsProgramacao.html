@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dicas HTML</title>
+
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      width: 100%;
+      font-family: sans-serif;
+      background-color: #121212;
+      color: #fff;
+    }
+    button {
+      appearance: none;
+      background-color: transparent;
+      border: none;
+      width: 35px;
+      margin-right: 10px;
+      cursor: pointer;
+      padding: 5px;
+      transition: all ease .3s;
+    }
+    button:hover {
+      background-color: rgba(255, 255, 255, 0.199);
+      border-radius: 5px;
+    }
+
+    h1 {
+      font-weight: 500;
+      text-align: center;
+      margin: 20px 0px;
+    }
+    h3 {
+      font-weight: 300;
+    }
+
+    #section_snippets {
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      margin-bottom: 100px;
+
+    }
+
+    #section_snippets h3 {
+      margin: 2rem 0rem 1rem 0rem;
+    }
+
+    .content_code_1,
+    .content_code_2,
+    .content_code_3 {
+      position: relative;
+    }
+
+    .content_code_1 .copy,
+    .content_code_2 .copy,
+    .content_code_3 .copy {
+      position: absolute;
+      top: 50px;
+      right: 0;
+    }
+    pre {
+      background-color: #2b3238b4;
+      border-top: 1px solid rgba(255, 255, 255, 0.116);
+      width: 100%;
+      border-radius: 10px;
+    }
+    
+    pre code {
+      width: 100%;
+      height: 100%;
+      font-size: 1.2em;
+      font-family: monospace;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Dicas de HTML</h1>
+
+  <section id="section_snippets">
+
+    <div class="content_code_1">
+      <h3>
+        Como usar a nav para navegação entre links
+      </h3>
+
+      <pre>
+        <code id="code1">
+
+    &lt;nav&gt;
+      &lt;a href="pagina1.html"&gt; Página 1 &lt;/a&gt;
+      &lt;a href="pagina2.html"&gt; Página 2 &lt;/a&gt;
+    &lt;/nav&gt;
+        </code>
+      </pre>
+
+      <button 
+      class="copy"
+      title="copiar para a área de transferência"
+      onclick="navigator.clipboard.writeText(document.querySelector('#code1').textContent)" 
+      >
+        <img src="./clipboard-with-text-svgrepo-com.svg" alt="">
+      </button>
+    </div>
+
+    <div class="content_code_2">
+      <h3>
+        Como criar um formulário simples
+      </h3>
+
+      <pre>
+        <code id="code">
+
+    &lt;form action="http://apiresponse.com" method="post"&gt;
+
+      &lt;input type="text" name="nome" placeholder="insira seu nome"&gt;
+      &lt;input type="number" name="idade" placeholder="insira sua idade"&gt;
+
+    <span style="color: rgba(255, 255, 255, 0.274);">
+      &lt;!--input do tipo radio tem que ter o mesmo valor no name,
+      para serem da mesma família não selecionar os dois ao mesmo tempo--&gt;
+    </span>
+      &lt;label for="masc"&gt;Masculino&lt;/label&gt;
+      &lt;input type="radio" name="sexo" id="masc"value="masculino"&gt;
+
+      &lt;label for="fem"&gt;Masculino&lt;/label&gt;
+      &lt;input type="radio" name="sexo" id="fem" value="feminino"&gt;
+
+    &lt;/form&gt;
+
+        </code>
+      </pre>
+
+      <button 
+      class="copy"
+      title="copiar para a área de transferência"
+      onclick="navigator.clipboard.writeText(document.querySelector('#code').textContent)" 
+      >
+        <img src="./clipboard-with-text-svgrepo-com.svg" alt="">
+      </button>
+    </div>
+
+    <div class="content_code_3">
+      <h3>
+        Como criar tables
+      </h3>
+
+      <pre>
+        <code id="code3">
+          
+    &lt;table&gt;
+      &lt;thead&gt; 
+        &lt;tr&gt;
+          &lt;th&gt;Nome&lt;/th&gt;
+          &lt;th&gt;Idade&lt;/th&gt;
+        &lt;/tr&gt; 
+      &lt;/thead&gt;
+
+      &lt;tbody&gt; 
+        &lt;tr&gt;
+          &lt;td&gt;José&lt;/td&gt;
+          &lt;td&gt;20&lt;/td&gt;
+        &lt;/tr&gt; 
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+        </code>
+      </pre>
+
+      <button 
+      class="copy"
+      title="copiar para a área de transferência"
+      onclick="navigator.clipboard.writeText(document.querySelector('#code3').textContent)" 
+      >
+        <img src="./clipboard-with-text-svgrepo-com.svg" alt="">
+      </button>
+    </div>
+
+  </section>
+</body>
+
+</html>

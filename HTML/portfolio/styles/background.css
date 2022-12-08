@@ -1,0 +1,80 @@
+.bolha {
+  border-radius: 100%;
+  aspect-ratio: 1/1;
+  background: var(--bg-bolha);
+  z-index: -10;
+  
+  filter: blur(60px) opacity(.4);
+  position: fixed;
+}
+
+.bolha_1 {
+  width: 400px;
+  left: 20px;
+  top: 20px;
+  animation: bolha_1 7s ease infinite alternate both;
+  
+}
+.bolha_2 {
+  width: 400px;
+  right: 20px;
+  animation: bolha_2 7s ease infinite alternate both;
+}
+
+.bolha_3 {
+  width: 400px;
+  bottom: 50px;
+  left: 20%;
+  animation: bolha_3 7s ease infinite alternate both;
+}
+
+@keyframes bolha_1 {
+  10%{
+    width: 370px;
+    left: 40px;
+    top: 50px;
+  }
+  60%{
+    width: 300px;
+    left: 20px;
+    top: 20px;
+  }
+  100%{
+    width: 400px;
+    left: 30px;
+    top: 60px;
+  }
+}
+
+@keyframes bolha_2 {
+  10%{
+    width: 370px;
+    right: 20px;
+  }
+  60%{
+    width: 300px;
+    right: 20px;
+  }
+  100%{
+    width: 400px;
+    right: 30px;
+  }
+}
+
+@keyframes bolha_3 {
+  10%{
+    width: 380px;
+    bottom: 40px;
+    left: 20%;
+  }
+  60%{
+    bottom: 50px;
+    left: 25%;
+  }
+  100%{
+    width: 400px;
+    bottom: 50px;
+    left: 20%;
+  }
+}
+

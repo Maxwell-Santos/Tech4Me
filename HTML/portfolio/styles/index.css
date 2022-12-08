@@ -1,0 +1,78 @@
+/* Importação de fontes e configurações padrões estão nesse arquivo base.css */
+@import './base.css';
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  width: 100%;
+  padding: 1rem;
+  margin-top: auto;
+}
+
+a {
+  color: #fff;
+}
+main h1{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 7em;
+  letter-spacing: 2px;
+  line-height: 1em;
+}
+
+main h2{
+  font-size: 2.5em;
+  font-weight: 300;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+nav {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+nav a{
+  background: rgba(255, 255, 255, 0.068);
+  border-radius: .7rem;
+  transition: all ease .3s;
+  padding: .7rem 1rem;
+  display: block;
+}
+
+nav a:hover {
+  background: #3F0071;
+  transform: translateY(-3px);
+}
+nav a:nth-child(2):hover{
+  background: #150050;
+}
+
+footer{
+  margin-top: auto;
+  padding: 30px 0px;
+}
+
+footer a {
+  padding: 3px 8px;
+  border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.055);
+}
+@media (max-width: 600px){
+  main h1 {
+    font-size: 4em;
+  }
+  main h2 {
+    font-size: 2em;
+  }
+}

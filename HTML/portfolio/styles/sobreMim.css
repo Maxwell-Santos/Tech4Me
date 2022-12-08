@@ -1,0 +1,60 @@
+@import './base.css';
+
+body{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.section_sobreMim{
+  max-width: 900px;
+  width: 100%;
+  min-height: 100vh;
+  padding: 40px 30px;
+  background-color: rgba(0, 0, 0, 0.438);
+  color: rgba(255, 255, 255, 0.849);
+}
+
+.sobreMim{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.sobreMim strong{
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2em;
+}
+
+.sobreMim li{
+  margin: 20px;
+  width: 200px;
+}
+.sobreMim li ul li{
+  margin: 5px 0px 5px 20px;
+}
+
+.tecs_definicoes {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2em;
+}
+.estudando_atualmente {
+  margin-top: 25px;
+}
+.estudando_atualmente h3 {
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+.tecs_definicoes dt {
+  margin-top: 25px;
+}
+.tecs_definicoes dd{
+  font-weight: 300;
+  margin-left: 20px;
+}
+.tecs_definicoes dd a{
+  padding: 3px 5px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.123);
+  color: #fff;
+}
