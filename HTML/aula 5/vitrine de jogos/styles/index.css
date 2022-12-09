@@ -1,0 +1,60 @@
+body {
+  display: grid;
+  place-items: center;
+}
+
+main {
+  width: 100%;
+  max-width: 1400px;
+  height: 80vh;
+  max-height: 900px;
+  display: flex;
+  padding: 20px;
+}
+
+article {
+  background-color: rgba(255, 255, 255, 0.096);
+  height: 100%;
+  flex: 1;
+  transition: all ease .5s;
+  overflow: hidden;
+}
+
+article:hover {
+  flex: 4;
+}
+
+table {
+  margin: 50px 0px;
+  font-size: 1em;
+}
+
+table caption {
+  font-size: 1.3em;
+  margin-bottom: 20px;
+}
+table td,
+th {
+  text-align: center;
+  padding: 10px;
+  padding-right: 50px;
+  padding-left: 20px;
+}
+
+table tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.082);
+}
+table thead {
+  background-color: rgb(11, 0, 158);
+}
+table thead th {
+font-weight: 300;
+}
+
+@media (max-width: 770px){
+
+  main {
+    flex-direction: column;
+    height: 100vh;
+  }
+}
