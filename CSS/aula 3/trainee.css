@@ -1,0 +1,13 @@
+/* 
+primeiras duas casas: red;
+segunda duas casas: green;
+terceira duas casas: blue;
+
+o hexadecimal é uma forma de se usar menos caracteres sendo o 00 mais perto do preto o ff o mais perto daquela cor desejada, ou "branco" ex: #00ff00 
+E assim vai misturando o vermelho, verde e azul, para criar as cores, logo se você colocar todos no máximo:
+#ffffff a mistura de todas as cores da branco.
+*/
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
