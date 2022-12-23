@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comidas Preferidas</title>
+
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      width: 100%;
+      min-height: 100vh;
+      font-family: cursive;
+    }
+
+    .graph {
+      height: calc(30px * 18);
+      /*cada célula tem 30px, vezes o 18 que é o maior número do gráfico*/
+      /* width: 200px; */
+      border-left: 1px solid grey;
+      border-bottom: 1px solid grey;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-around;
+      width: 100%;
+      max-width: 700px;
+      position: relative;
+      margin: 40px auto;
+    }
+
+    .food {
+      width: 80px;
+      background: linear-gradient(to bottom, var(--bg),rgb(126, 0, 138));
+      height: calc(var(--height) * 30px);
+      /*altura o gráfico vezes 30px que seria a diferença de uma célula*/
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      z-index: 10;
+    }
+
+    .food span {
+      position: relative;
+      bottom: -25px;
+    }
+
+    .aside{
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      justify-content: space-between;
+      left: -20px;
+      top: -10px;
+      height: calc(100% + 18px);
+      /* height: calc(30px * 18); */
+      /* background-color: red; */
+    }
+    .quantity {
+      text-align: right;
+      position: relative;
+    } 
+    
+    .quantity::after{
+      content: '';
+      position: absolute;
+      left: 100%;
+      top: 50%;
+      /* transform: translate(-50%); */
+      transform: translateY(-50%);
+      width: 700px;
+      height: 1px;
+      background: rgba(0, 0, 0, 0.295);
+    }
+    .quantity:last-child::after{
+      display: none;
+      
+    }
+
+  </style>
+</head>
+
+<body>
+
+    <div class="graph">
+    <div class="aside">
+      <span class="quantity">18</span>
+      <span class="quantity">17</span>
+      <span class="quantity">16</span>
+      <span class="quantity">15</span>
+      <span class="quantity">14</span>
+      <span class="quantity">13</span>
+      <span class="quantity">12</span>
+      <span class="quantity">11</span>
+      <span class="quantity">10</span>
+      <span class="quantity">9</span>
+      <span class="quantity">8</span>
+      <span class="quantity">7</span>
+      <span class="quantity">6</span>
+      <span class="quantity">5</span>
+      <span class="quantity">4</span>
+      <span class="quantity">3</span>
+      <span class="quantity">2</span>
+      <span class="quantity">1</span>
+      <span class="quantity">0</span>
+    </div>
+
+    <div class="food" style="--bg:#205295; --height: 16;">
+      <span>Strogonoff</span>
+    </div>
+    <div class="food" style="--bg:#227C70; --height: 10;">
+      <span>Lasanha</span>
+    </div>
+    <div class="food" style="--bg:#CE7777; --height: 18;">
+      <span>Churrasco</span>
+    </div>
+    <div class="food" style="--bg:#46C2CB; --height: 15;">
+      <span>Empadão</span>
+    </div>
+    <div class="food" style="--bg:#FF7000; --height: 3;">
+      <span>Jiló</span>
+    </div>
+    </div>
+
+
+</body>
+
+</html>

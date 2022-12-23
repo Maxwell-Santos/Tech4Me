@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comidas Preferidas</title>
+
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      width: 100%;
+      min-height: 100vh;
+      font-family: cursive;
+      display: grid;
+      place-items: center;
+      background: #F8EDE3;
+    }
+
+    h1 {
+      color: #0000ff9c;
+    }
+    .graph {
+      width: calc(18px * 2 * 18);
+      border-bottom: 1px solid #9e9e9e73;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .food {
+      background: linear-gradient(to left, var(--bg),#7e008a);
+      width: calc(var(--width) * 2 * 18px);
+      padding: 10px;
+      z-index: 10;
+      margin: 20px 0px;
+      animation: load 2s ease;
+      border-radius: 5px;
+    }
+
+    .food:last-child{
+      margin-bottom: 30px;
+    }
+    .food span {
+      text-align: left;
+      color: #fff;
+      letter-spacing: 2px;
+
+    }
+
+    .aside{
+      display: flex;
+      flex-direction: row-reverse;
+      position: absolute;
+      justify-content: space-around;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+
+    .aside span{
+      letter-spacing: -1px;
+      color: #9e9e9e;
+    }
+
+    @keyframes load {
+      from {
+       width: 0;
+       padding: 10px 0px ;
+      }
+      to {
+        width: calc(var(--width) * 2 * 18px);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="graph">
+    <h1>Comidas preferidas</h1>
+    <div class="aside">
+      <span class="quantity">18</span>
+      <span class="quantity">17</span>
+      <span class="quantity">16</span>
+      <span class="quantity">15</span>
+      <span class="quantity">14</span>
+      <span class="quantity">13</span>
+      <span class="quantity">12</span>
+      <span class="quantity">11</span>
+      <span class="quantity">10</span>
+      <span class="quantity">9</span>
+      <span class="quantity">8</span>
+      <span class="quantity">7</span>
+      <span class="quantity">6</span>
+      <span class="quantity">5</span>
+      <span class="quantity">4</span>
+      <span class="quantity">3</span>
+      <span class="quantity">2</span>
+      <span class="quantity">1</span>
+      <span class="quantity">0</span>
+    </div>
+
+    <div class="food" style="--bg:#CE7777; --width: 18;">
+      <span>Churrasco</span>
+    </div>
+    <div class="food" style="--bg:#afd2ff; --width: calc(16 - 1);">
+      <span>Strogonoff</span>
+    </div>
+    <div class="food" style="--bg:#46C2CB; --width: calc(15 - 1);">
+      <span>Empadão</span>
+    </div>
+    <div class="food" style="--bg:#227C70; --width: calc(10 - 1);">
+      <span>Lasanha</span>
+    </div>
+    <div class="food" style="--bg:#FF7000; --width: 3;">
+      <span>Jiló</span>
+    </div>
+    </div>
+
+
+</body>
+
+</html>
