@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,700;0,900;1,600&display=swap"
+    rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <title>Cupcake </title>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'poppins': 'Poppins, sans-serif'
+          }
+        },
+        keyframes: {
+          'pedir-l': {
+            from: {
+              transform: 'translateX(-20px) rotate(90deg)'
+            },
+            to: {
+              transform: 'translateX(0px) rotate(90deg)'
+            }
+          },
+          'pedir-r': {
+            from: {
+              transform: 'translateX(20px) rotate(-90deg)'
+            },
+            to: {
+              transform: 'translateX(0) rotate(-90deg)'
+            }
+          },
+        },
+        animation: {
+          'pedir-l' : 'pedir-l .5s infinite ease-in alternate',
+          'pedir-r' : 'pedir-r .5s infinite ease-in alternate'
+        }
+      },
+    }
+  </script>
+
+  <style type="text/tailwindcss">
+    @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
+  @layer base {
+    body {
+      @apply bg-[rgba(0,183,255,0.27)] font-poppins text-gray-700 selection:bg-[#f8ab3e86]
+    }
+
+    img {
+      @apply w-full h-full object-cover
+    }
+
+  }
+  @layer components {
+    .title {
+      @apply text-8xl text-center font-extrabold text-[#dba04d] max-[900px]:text-6xl max-[425px]:text-4xl
+    }
+    .description {
+      @apply text-xl text-center max-w-[600px] max-[900px]:text-base leading-relaxed
+    }
+    .add {
+      @apply bg-[#e6ac5c] hover:bg-[#f8ab3e] hover:-translate-y-2 transition-all text-center p-4 px-10 rounded-full font-bold text-xl text-white uppercase max-[640px]:text-base max-[640px]:p-3 max-[640px]:px-4
+    }
+  }
+</style>
+</head>
+
+<body>
+
+  <button
+  class="p-2 px-3 bg-white/70 backdrop-blur-sm rounded-full text-cyan-700 text-sm font-semibold shadow-sm hover:-translate-x-1 transition-all fixed top-3 left-3"
+  onclick="history.back()">
+  Voltar
+</button>
+
+  <main class="flex flex-row-reverse items-center  w-full max-[500px]:flex-col">
+    <div class="flex-1 h-screen max-[500px]:mt-14 overflow-hidden">
+      <img
+        src="https://images.unsplash.com/photo-1551106652-a5bcf4b29ab6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80"
+        alt="" class="hover:scale-125 transition-all ease duration-700 max-[500px]:h-[300px] max-[500px]:aspect-square max-[500px]:rounded-lg">
+    </div>
+
+    <div class="flex-[1.4] p-5 flex flex-col items-center gap-8 max-[500px]:gap-4">
+      <h1 class="title">Sonho</h1>
+
+      <p class="description">Um verdadeiro sonho de tão gostoso! Quem poderia imaginar que um pãozinho recheado com creme de confeiteiro e cobertura de chocolate seria tão bom?</p>
+
+      <div class="flex items-center mt-8">
+        <img src="../assets/seta.png" alt="" class="animate-pedir-l w-12 max-[300px]:w-10">
+        <button class="add">Quero esse</button>
+        <img src="../assets/seta.png" alt="" class="animate-pedir-r w-12 max-[300px]:w-10">
+      </div>
+    </div>
+
+  </main>
+</body>
+
+</html>

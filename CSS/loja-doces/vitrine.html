@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,700;0,900;1,600&display=swap"
+    rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <title>Vitrine</title>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'poppins': 'Poppins, sans-serif'
+          },
+
+          backgroundColor: {
+            'primary-button': '#e6ac5c',
+            'primary-button-hover': '#f8ab3e',
+            'card': '#ffff'
+          },
+
+          textColor: {
+            'title-card': '#ca9140'
+          }
+        },
+      },
+    }
+  </script>
+
+  <style type="text/tailwindcss">
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+
+    @layer base {
+      html {
+        @apply scroll-smooth
+      }
+      body {
+        @apply text-gray-500 bg-[rgba(0,183,255,0.27)] font-poppins selection:bg-[#f8ab3e86] 
+      }
+    }
+    @layer components {
+
+      .container {
+        @apply flex flex-wrap justify-center w-full gap-4 mt-8
+      }
+
+      .success {
+        @apply bg-[#e6ac5c] py-10 pb-12 w-full
+      }
+
+      .success > div {
+        @apply flex flex-wrap justify-center gap-4
+      }
+      .card {
+        @apply w-full max-w-[300px] shadow-[2px_4px_5px_rgba(0,0,0,0.1)] rounded-xl p-4 overflow-hidden bg-card
+      }
+
+      .card img {
+        @apply w-full h-[250px] object-cover overflow-hidden rounded-md
+      }
+
+      .card .title-card {
+        @apply mt-4 font-bold text-3xl text-title-card text-center
+      }
+
+
+      .content {
+        @apply flex flex-col gap-3 overflow-hidden
+      }
+
+      .content a {
+        @apply bg-primary-button hover:bg-primary-button-hover text-center p-3 rounded-xl text-white
+      }
+
+      .content p {
+        @apply overflow-hidden h-24 block leading-7 bg-gradient-to-b from-gray-500 via-gray-500 bg-clip-text text-transparent
+      }
+      
+      form .email {
+        @apply w-full p-4 pl-14 rounded-md outline-none focus:ring-4 focus:ring-offset-2 focus:ring-[rgba(0,183,255,0.64)] hover:ring-4 hover:ring-offset-2 hover:ring-[rgba(0,183,255,0.64)] transition-all
+      }
+
+      form .submit {
+        @apply w-full bg-primary-button p-4 text-lg rounded-xl text-white font-bold uppercase tracking-wide cursor-pointer hover:bg-primary-button-hover transition-all shadow-sm mt-5
+      }
+
+      form .termos {
+        @apply accent-[rgba(0,183,255,0.64)]
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <nav
+    class="fixed top-0 left-0 w-full backdrop-blur-md flex justify-between p-3 md:pr-20 items-center font-bold text-white">
+    <button
+      class="p-2 px-3 bg-white rounded-full text-cyan-700 text-sm font-semibold shadow-sm hover:-translate-x-1 transition-all"
+      onclick="history.back()">
+      Voltar
+    </button>
+
+    <span class="text-2xl tracking-wide uppercase" style="text-shadow: -5px 3px 5px rgba(0,0,0,0.2);">
+      <span class="text-[#ffb95a] font-extrabold">L</span>oja de doces
+    </span>
+
+  </nav>
+
+  <section class="grid place-items-center mt-[60px]">
+
+    <div class="success">
+      <h2 class="text-center font-extrabold sm:text-6xl mb-6 text-[#fff] text-4xl">Mais vendidos</h2>
+
+      <div>
+        <div class="card">
+          <img
+            src="https://images.unsplash.com/photo-1603532648955-039310d9ed75?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y3VwY2FrZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+            alt="">
+          <div class="content">
+            <h3 class="title-card">Cupcake</h3>
+            <p>
+              Um pequeno bolo que causa grandes sensações deliciosas. Recheadíssimo com diversos sabores entre
+              brigadeiro, ninho, ferrero rocher e trufado.
+            </p>
+            <a href="details/detalhe_1.html">Detalhes</a>
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="https://images.unsplash.com/photo-1558326567-98ae2405596b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=759&q=80"
+            alt="imagem de macaroon">
+          <div class="content">
+            <h3 class="title-card">Macaroon</h3>
+            <p>
+              Diretamente da França, este biscoito de massa crocante por fora e macia por dentro promete adoçar sua vida. Colorido e saboroso, é acompanhado por sabores como maracujá, blueberry, lavanda, abacaxi e chocolate, a depender da cor. Bon Appétit!
+            </p>
+            <a href="details/detalhe_2.html">Detalhes</a>
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="https://images.unsplash.com/photo-1551106652-a5bcf4b29ab6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80"
+            alt="">
+          <div class="content">
+            <h3 class="title-card">Sonho</h3>
+            <p>
+              Um verdadeiro sonho de tão gostoso! Quem poderia imaginar que um pãozinho recheado com creme de confeiteiro e cobertura de chocolate seria tão bom?
+            </p>
+            <a href="details/detalhe_3.html">Detalhes</a>
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="https://images.unsplash.com/photo-1595397351604-cf490cc38bf1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80"
+            alt="">
+          <div class="content">
+            <h3 class="title-card">Sequilho</h3>
+            <p>
+              Minibiscoito que derrete na boca. Perfeito para tomar com um café quentinho ou para acompanhar um chá de fim de tarde.
+            </p>
+            <a href="details/detalhe_4.html">Detalhes</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="card">
+        <img
+          src="https://images.unsplash.com/photo-1547047803-fa4a5f94ffd2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+          alt="">
+
+        <div class="content">
+          <h3 class="title-card">Cookie</h3>
+          <p>
+            Biscoito crocante e fresquinho com gotas de chocolate ou amêndoas. Sua redondez simboliza o ciclo que se fica após comer um: se deseja comer outro e mais outro, ficando infinitamente melhor a cada mordida.
+          </p>
+          <a href="">Detalhes</a>
+        </div>
+
+      </div>
+      <div class="card">
+        <img
+          src="https://images.unsplash.com/photo-1546549095-5d8bc3c37ffa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDV8fERPQ0V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+          alt="">
+
+        <div class="content">
+          <h3 class="title-card">Copo da felicidade</h3>
+          <p>
+            Copos regados de tudo que é mais gostoso: cookie, brownie, brigadeiro, doce de leite, gotas de chocolate, bombom, tudo a depender do cliente. Impossível não ser feliz com tanta doçura, né?
+          </p>
+          <a href="">Detalhes</a>
+        </div>
+
+      </div>
+      <div class="card">
+        <img
+          src="https://images.unsplash.com/photo-1578554813309-8196f50f6811?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8Y2h1cnJvc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+          alt="">
+
+        <div class="content">
+          <h3 class="title-card">Churros</h3>
+          <p>
+            Churros quentinhos, churros feitos na hora! Podem ser cobertos com amendoim ou granulado, recheados de brigadeiro ou doce de leite, e são feitos para rechear sua vida com o que há de melhor.
+          </p>
+          <a href="">Detalhes</a>
+        </div>
+
+      </div>
+      <div class="card">
+        <img
+          src="https://images.unsplash.com/photo-1560081223-734e568800b7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGNha2UlMjBwb3B8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+          alt="">
+
+        <div class="content">
+          <h3 class="title-card">Sorvete</h3>
+          <p>
+            Nada melhor no calor do que um sorvetinho para refrescar, né? Estes picolés prometem de energizar e refrescar, não importa quão quente esteja.
+          </p>
+          <a href="">Detalhes</a>
+        </div>
+      </div>
+      <div class="card">
+        <img
+          src="https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fGNha2UlMjBwb3B8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+          alt="">
+
+        <div class="content">
+          <h3 class="title-card">Bolo</h3>
+          <p>
+            Bolos recheados e confeitados de acordo com o estilo do cliente, desde o mais comum ao mais exótico! Há também fatias livres, para quem deseja apenas uma parcela desta gostosura. Há ainda opção light, para todos serem felizes sem culpa!
+          </p>
+          <a href="">Detalhes</a>
+        </div>
+
+      </div>
+      <div class="card">
+        <img
+          src="https://images.unsplash.com/photo-1630953899906-d16511a72558?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YnJpZ2FkZWlyb3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+          alt="">
+
+        <div class="content">
+          <h3 class="title-card">Brigadeiro</h3>
+          <p>
+            Deliciosa massa de chocolate enrolada e confeitada, pronta para ser comida! Temos também brigadeiro de morango e ninho.
+          </p>
+          <a href="">Detalhes</a>
+        </div>
+
+      </div>
+      <div class="card">
+        <img
+          src="https://images.unsplash.com/photo-1609610022054-8328f7bdd40c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+          alt="">
+
+        <div class="content">
+          <h3 class="title-card">Rocambole</h3>
+          <p>
+            Bolo de massa fina e enrolada; um rolinho recheado dos mais cremosos sabores. Acompanha cobertura de frutas, amêndoas ou chocolate.
+          </p>
+          <a href="">Detalhes</a>
+        </div>
+
+      </div>
+      <div class="card">
+        <img
+          src="https://images.unsplash.com/photo-1659559639443-1609c2391cb4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80"
+          alt="">
+
+        <div class="content">
+          <h3 class="title-card">Suspiro</h3>
+          <p>
+            Tão bom que é impossível não suspirar quando se consome! Crocante por fora, esse doce derrete na boca e anima qualquer dia ruim.
+          </p>
+          <a href="">Detalhes</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="flex items-center flex-col p-3 my-16">
+
+    <h2 class="text-center my-4 font-extrabold text-5xl mb-16 text-[#357ab3]">Quero receber promoções</h2>
+    <form action="" class="w-full max-w-[450px] flex flex-col">
+
+      <div class="relative">
+        <img src="./assets/email.svg" alt="ícone de email" class="absolute z-10 left-1 top-1/2 -translate-y-1/2">
+        <input type="email" id="email" class="email relative" name="email" placeholder="ex: pessoal@gmail.com">
+      </div>
+
+      <div class="flex items-center gap-2 my-5 self-end">
+        <label for="termos" class="text-end leading-5">Aceito os termos propostos para receber promoções</label>
+        <input type="checkbox" id="termos" class="termos" name="termos">
+      </div>
+
+      <input type="submit" class="submit" value="Receber" onclick="alert('E-mail cadastrado com sucesso!')">
+    </form>
+  </section>
+
+</body>
+
+</html>

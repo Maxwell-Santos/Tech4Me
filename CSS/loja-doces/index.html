@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,700;0,900;1,600&display=swap"
+    rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <title>Loja de Doces</title>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'poppins': 'Poppins, sans-serif'
+          }
+        },
+      },
+    }
+  </script>
+
+</head>
+
+<body class="font-poppins w-full min-h-screen bg-[rgba(0,183,255,0.27)] selection:bg-[#f8ab3e86]">
+
+  <main class="flex gap-5 h-screen">
+    <img class="object-cover h-screen w-full flex-[.7] hidden sm:inline-block sm:flex-1" src="assets/cake.jpg" alt="imagem de bolo">
+
+    <section class="flex-[1.5] flex items-center justify-center flex-col">
+
+      <h1 class="text-5xl md:text-7xl uppercase font-bold text-white text-center" style="text-shadow: -5px 5px 5px rgba(0,0,0,0.1);">
+        <span class="text-[#ffb95a] font-extrabold">l</span>oja de doces
+      </h1>
+
+      <a href="vitrine.html"
+      class="p-4 px-7 rounded-full bg-[#ffb95a] font-semibold text-white mt-10 text-xl hover:-translate-y-1 transition-all hover:bg-[#f8ab3e] "
+      >
+        Ver a vitrine
+      </a>
+    </section>
+  </main>
+</body>
+
+</html>
