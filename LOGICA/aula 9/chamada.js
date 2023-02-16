@@ -1,12 +1,12 @@
 const prompt = require("prompt-sync")()
-
+const alunos = []
 let nome = ''
-let nomes = []
 
 do {
   nome = prompt("Qual o seu nome? ")
-  nomes.push(nome)
+  alunos.push(nome)
 
-} while(nome != '')
+}while(nome != '')
 
-console.log(nomes)
+
+console.log(alunos)

@@ -2,20 +2,20 @@ let prompt = require("prompt-sync")()
 
 let lanche = prompt("Meu sanduíche: ")
 let total = 0
-let pedidoCompleto = ''
-const concluir = "concluir"
+let todosOsAcompanhamentos = []
 let acompanhamento = ''
+
+const concluir = "concluir"
 
 console.log("você tem direito até cinco acompanhamentos")
 
-for (let i = 0; i < 5; i++) {
+do {
+  acompanhamento = prompt('acompanhamento: ')
+  todosOsAcompanhamentos.push(acompanhamento)
+  total += 2
 
-  do {
-    acompanhamento = prompt(`acompanhamento ${i + 1}: `)  
-    total += 2
+} while(acompanhamento != concluir || todosOsAcompanhamentos.length == 5)
 
-  } while(acompanhamento == concluir)
-}
+console.log('Total dos acompanhamentos: ', total)
 
-console.log(total)
-console.log(acompanhamento)
+console.log(todosOsAcompanhamentos)
