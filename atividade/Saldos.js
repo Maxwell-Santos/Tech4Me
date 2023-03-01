@@ -18,9 +18,6 @@ const clientes = [
   'Neymar'
 ]
 
-//afim para ignorar a diferença de maiúsculas e minúsculas quando for procurar o nome, padronizei todo o array como maiúsculo
-const clientesUpper = clientes.map(cliente => cliente.toUpperCase())
-
 const saldos = [
   '3.00',
   '1000.00',
@@ -36,18 +33,20 @@ const saldos = [
   '-150.00',
   '0.00'
 ]
+
 const nomeCliente = prompt("nome: ")
 
+acharCliente(nomeCliente)
 
 function acharCliente(nome){
   let achouCliente = false
 
-  for (let i = 0; i < clientesUpper.length; i++) {
-    let cliente = clientesUpper[i]
+  for (let i = 0; i < clientes.length; i++) {
+    let cliente = clientes[i]
     
     //o nome está em uppercase para ignorar letras maiúsculas e minúsculas que o usuário digitar
-    if (nome.toUpperCase() == cliente){
-      let indexCliente = clientesUpper.indexOf(cliente)
+    if (nome.toUpperCase() == cliente.toUpperCase()){
+      let indexCliente = clientes.indexOf(cliente)
       let saldo = saldos[indexCliente]
       
       console.log(`\nCliente: ${cliente} \nSaldo na conta corrente: ${saldo}\n`)
@@ -55,7 +54,5 @@ function acharCliente(nome){
       break
     } 
   }
-  if(!achouCliente) console.log('cliente não encontrado 🙄')
+  if(!achouCliente) console.log(`cliente ${nomeCliente} não foi encontrado 🙄`)
 }
-
-acharCliente(nomeCliente)

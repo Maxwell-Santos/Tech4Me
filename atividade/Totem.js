@@ -7,17 +7,16 @@ let acompanhamento = ''
 
 const concluir = "concluir"
 
-console.log("você tem direito até 5 acompanhamentos")
+console.log("\nVocê tem direito até 5 acompanhamentos, por R$ 2,00 cada\n")
 
-do {
-  acompanhamento = prompt('acompanhamento: ')
+for (let i = 0; i != 5; i++) {
+  acompanhamento = prompt(`acompanhamento ${todosOsAcompanhamentos.length + 1}: ` )
+  if(acompanhamento == concluir) break
+
   todosOsAcompanhamentos.push(acompanhamento)
   total += 2
+  
+}
 
-  if(todosOsAcompanhamentos.length == 5) break
-
-} while(acompanhamento != concluir)
-
-console.log('Preço com os acompanhamentos: R$', total)
-
+console.log('\nSoma dos acompanhamentos: R$', total)
 console.log('Lanche:', lanche, '\nAcompanhamentos:', todosOsAcompanhamentos)

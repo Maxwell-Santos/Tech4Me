@@ -1,3 +1,4 @@
+// ambos funcionam individualmente, então basta escolher antes ou depois do == while comum == e comentar aquele loop para não dar erro
 const prompt = require("prompt-sync")()
 
 let nome = ''
@@ -13,7 +14,9 @@ do {
 
 console.log(nomes)
 
+
 // === WHILE COMUM ===
+
 nome = prompt("Qual o seu nome? ")
 
 while(nome != "") {
