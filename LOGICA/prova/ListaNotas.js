@@ -1,4 +1,4 @@
-const alunos = []
+const alunos = [];
 
 var aluno = {
   nome: 'Alex',
@@ -7,7 +7,7 @@ var aluno = {
   nota_6: 8.7,
   media: 0
 }
-alunos.push(aluno)
+alunos.push(aluno);
 
 aluno = {
   nome: 'Leandro',
@@ -16,7 +16,7 @@ aluno = {
   nota_6: 5.9,
   media: 0
 }
-alunos.push(aluno)
+alunos.push(aluno);
 
 aluno = {
   nome: 'Vinícius',
@@ -25,7 +25,7 @@ aluno = {
   nota_6: 7.5,
   media: 0
 }
-alunos.push(aluno)
+alunos.push(aluno);
 
 aluno = {
   nome: 'Marcia',
@@ -34,7 +34,7 @@ aluno = {
   nota_6: 8.2,
   media: 0
 }
-alunos.push(aluno)
+alunos.push(aluno);
 
 aluno = {
   nome: 'Thays',
@@ -43,51 +43,54 @@ aluno = {
   nota_6: 4.9,
   media: 0
 }
-alunos.push(aluno)
+alunos.push(aluno);
 
-console.log("RELATÓRIO DAS NOTAS\n")
+console.log("RELATÓRIO DAS NOTAS");
 
 const relatorio = alunos.map(aluno => {
-  console.log('NOME:', aluno.nome)
-  console.log('NOTA 1:', aluno.nota_4,)
-  console.log('NOTA 2:', aluno.nota_6, '\n')
+
+  console.log(`
+NOME: ${aluno.nome}
+NOTA 1: ${aluno.nota_4}
+NOTA 2: ${aluno.nota_6}`);
+
 })
 
-const medias = []
-const alunosAbaixoMedia = []
+const medias = [];
+const alunosAbaixoMedia = [];
 
 function mediasAlunos() {
   for (let i = 0; i < alunos.length; i++) {
-    const aluno = alunos[i]
-    const media = (aluno.nota_4 + aluno.nota_6) / 2
-    aluno.media = media.toFixed(2)
-    medias.push(aluno.media)
+    const aluno = alunos[i];
+    const media = (aluno.nota_4 + aluno.nota_6) / 2;
+    aluno.media = media.toFixed(2);
+    medias.push(aluno.media);
   }
 }
-mediasAlunos()
+mediasAlunos();
 
-console.log("\n== A média mínima para passar é: 7.00 ==\n")
+console.log("\n== A média mínima para passar é: 7.00 ==\n");
 
-const ordenado = medias.sort()
-const maiorMedia = ordenado[ordenado.length - 1]
+const ordenado = medias.sort();
+const maiorMedia = ordenado[ordenado.length - 1];
 
 alunos.forEach(aluno => {
   if (aluno.media == maiorMedia) {
-    console.log("O Aluno com a maior média foi:", aluno.nome, "\nmédia:", aluno.media, '\n')
+    console.log("O Aluno com a maior média foi:", aluno.nome, "\nmédia:", aluno.media, '\n');
   }
   if (aluno.media < 7) {
-    alunosAbaixoMedia.push(aluno)
+    alunosAbaixoMedia.push(aluno);
   }
 })
 
 if (alunosAbaixoMedia.length != 0) {
 
-  console.log("== ALUNOS ABAIXO DA MÉDIA ==")
-  console.log(alunosAbaixoMedia.length, 'alunos estão abaixo da média 😕\n')
+  console.log("== ALUNOS ABAIXO DA MÉDIA ==");
+  console.log(alunosAbaixoMedia.length, 'alunos estão abaixo da média 😕\n');
 
   alunosAbaixoMedia.forEach(aluno => {
-    console.log('NOME:', aluno.nome)
-    console.log('MÉDIA FINAL:', aluno.media, '\n')
+    console.log('NOME:', aluno.nome);
+    console.log('MÉDIA FINAL:', aluno.media, '\n');
   })
 
-} else console.log("TODOS OS ALUNOS FORAM APROVADOS!")
+} else console.log("TODOS OS ALUNOS FORAM APROVADOS!");

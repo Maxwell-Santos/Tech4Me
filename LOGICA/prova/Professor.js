@@ -1,4 +1,4 @@
-// ambos funcionam individualmente, então basta escolher antes ou depois do == while comum == e comentar aquele loop para não dar erro
+// ambos funcionam individualmente, então basta escolher antes ou depois do comentário: == while comum == e comentar aquele loop para não dar erro
 const prompt = require("prompt-sync")()
 
 let nome = ''
