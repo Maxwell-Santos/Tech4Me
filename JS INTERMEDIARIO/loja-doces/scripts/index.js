@@ -1,4 +1,4 @@
-const container = document.querySelector("body > main > section")
+const container = document.getElementById("intro")
 
 const div = document.createElement("div")
 
@@ -6,16 +6,16 @@ const div = document.createElement("div")
 div.style = `
   position: absolute;
   top: 80px;
-  color: #c9c9c9;
+  color: #fff;
   font-weight: 600;
   font-size: 25px;
   text-align: center;
-  background-color: #fff;
-  max-width: 360px;
+  background-color: #ffb95a;
+  max-width: 400px;
   width: 100%;
   padding: 10px 0px;
-  border-radius: 10px;
-  shadow-box: 2px 2px 5px rgba(0,0,0,0.1);
+  // border-radius: 10px;
+  filter: drop-shadow(2px 2px 1px rgba(0,0,0,0.1));
 `
 
 function cronometro() {

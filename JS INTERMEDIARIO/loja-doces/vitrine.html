@@ -55,28 +55,23 @@
         @apply flex flex-wrap justify-center w-full gap-4 mt-8
       }
 
-      .success {
-        @apply bg-[#e6ac5c] py-10 w-full
-      }
-
       .success > div {
-        @apply flex flex-wrap justify-center
+        @apply flex flex-wrap justify-center gap-4
       }
-
       .card {
-        @apply w-fit flex gap-10 shadow-[2px_4px_5px_rgba(0,0,0,0.1)] rounded-xl p-4 overflow-hidden bg-card
+        @apply w-full max-w-[300px] shadow-[2px_4px_5px_rgba(0,0,0,0.1)] rounded-xl p-4 overflow-hidden bg-card
       }
 
       .card img {
-        @apply w-full h-[260px] w-[280px] object-cover overflow-hidden rounded-md
+        @apply w-full h-[250px] object-cover overflow-hidden rounded-md
       }
 
       .card .title-card {
-        @apply font-bold text-4xl text-title-card
+        @apply mt-4 font-bold text-2xl text-title-card text-center
       }
 
       .content {
-        @apply flex flex-col justify-center gap-4 overflow-hidden max-w-[600px]
+        @apply flex flex-col gap-3 overflow-hidden
       }
 
       .content a {
@@ -84,18 +79,18 @@
       }
 
       .content p {
-        @apply leading-7 text-lg
+        @apply overflow-hidden h-24 block leading-7 bg-gradient-to-b from-gray-500 via-gray-500 bg-clip-text text-transparent
       }
-      
-      form .email {
+
+      #formulario .email {
         @apply w-full p-4 pl-14 rounded-md outline-none focus:ring-4 focus:ring-offset-2 focus:ring-[rgba(0,183,255,0.64)] hover:ring-4 hover:ring-offset-2 hover:ring-[rgba(0,183,255,0.64)] transition-all
       }
 
-      form .submit {
+      #formulario .submit {
         @apply w-full bg-primary-button p-4 text-lg rounded-xl text-white font-bold uppercase tracking-wide cursor-pointer hover:bg-primary-button-hover transition-all shadow-sm mt-5
       }
 
-      form .termos {
+      #formulario .termos {
         @apply accent-[rgba(0,183,255,0.64)]
       }
     }
@@ -105,34 +100,33 @@
 
 <body>
 
-  <nav
-    class="fixed top-0 left-0 w-full backdrop-blur-md flex justify-between p-3 md:pr-20 items-center font-bold text-white">
-    <button
-      class="p-2 px-3 bg-white rounded-full text-cyan-700 text-sm font-semibold shadow-sm hover:-translate-x-1 transition-all"
-      onclick="history.back()">
-      Voltar
-    </button>
-
-    <span class="text-2xl tracking-wide uppercase" style="text-shadow: -5px 3px 5px rgba(0,0,0,0.2);">
-      <span class="text-[#ffb95a] font-extrabold">L</span>oja de doces
-    </span>
-
-  </nav>
+  <header>
+    <nav
+      class="fixed top-0 left-0 w-full backdrop-blur-md flex justify-between p-3 md:pr-20 items-center font-bold text-white">
+      <button
+        class="p-2 px-3 bg-white rounded-full text-cyan-700 text-sm font-semibold shadow-sm hover:-translate-x-1 transition-all"
+        onclick="history.back()">
+        Voltar
+      </button>
+      <span class="text-2xl tracking-wide uppercase" style="text-shadow: -5px 3px 5px rgba(0,0,0,0.2);">
+        <span class="text-[#ffb95a] font-extrabold">L</span>oja de doces
+      </span>
+    </nav>
+  </header>
 
   <section class="grid place-items-center mt-[60px]">
 
-    <div class="success">
-      <h2 class="text-center font-extrabold sm:text-6xl mb-6 text-[#fff] text-4xl">Mais vendidos</h2>
-    </div>
+    <h2 class="text-center font-extrabold sm:text-6xl text-[#fff] text-4xl">Mais vendidos</h2>
 
     <div class="container" id="container">
+      <!-- cards dos doces -->
     </div>
   </section>
 
   <section class="flex items-center flex-col p-3 my-16">
 
     <h2 class="text-center my-4 font-extrabold text-5xl mb-16 text-[#357ab3]">Quero receber promoções</h2>
-    <form action="" class="w-full max-w-[450px] flex flex-col">
+    <div class="w-full max-w-[460px] flex flex-col" id="formulario">
 
       <div class="relative">
         <img src="./assets/email.svg" alt="ícone de email" class="absolute z-10 left-1 top-1/2 -translate-y-1/2">
@@ -140,17 +134,18 @@
       </div>
 
 
-      <div class=" items-center gap-2 my-5 self-end">
-        <label for="termos" class="text-end leading-5">Aceito os termos propostos para receber promoções</label>
-        <input type="checkbox" id="termos" class="termos" name="termos">
+      <div id="container_checkbox" class="my-5 self-end p-1 py-2 rounded-md">
+        <div class="flex mb-1 gap-2">
+          <label for="termos" class="text-end leading-5">Aceito os termos propostos para receber promoções</label>
+          <input type="checkbox" id="termos" class="termos" name="termos">
+        </div>
       </div>
 
-      <input type="submit" class="submit" value="Receber">
-    </form>
+      <input type="button" class="submit" id="btn_enviar" value="Receber">
+    </div>
   </section>
 
   <script src="./scripts/vitrine.js"></script>
-  <script src="./scripts/detalhes2.js"></script>
 </body>
 
 </html>

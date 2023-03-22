@@ -1,19 +1,18 @@
 const input_email = document.getElementById("email")
-const btn_enviar = document.querySelector("input[type='submit']")
+const btn_enviar = document.getElementById("btn_enviar")
 const checkbox = document.getElementById("termos")
+const container_checkbox = document.getElementById("container_checkbox")
 
 let resposta = ""
 let email = ""
 
 const label = document.createElement("label")
-const pai = document.querySelector("body > section > form")
 
 input_email.onchange = (event) => {
   email = event.target.value
 }
 
-btn_enviar.onclick = (event) => {
-  event.preventDefault()
+btn_enviar.onclick = () => {
 
   if (!input_email.value && checkbox.checked) {
     resposta = prompt("Por favor, preencha o email")
@@ -38,17 +37,12 @@ function validacaoEmail(email_validacao) {
   const arroba = email_validacao.includes("@")
   const arrobaPosicao = email_validacao.indexOf("@")
 
-  // essa variável existe, pois o email, pode conter pontos antes do @ ex: max.coding@gmail.com, e o includes procura o primeiro carácter que condiz com a validação. Então esse "dominio" procura ponto só após o arroba. (no domínio)
+  // essa variável existe, pois o email, pode conter pontos antes do @, ex: max.coding@gmail.com, e o includes procura o primeiro carácter que condiz com a validação. Então esse "dominio" procura ponto só após o arroba. (no domínio)
   const dominio = email_validacao.substring(arrobaPosicao, email_validacao.length) //recorte de tudo depois do arroba
-
-  console.log(dominio)
-
   const incluiPonto = dominio.includes(".")
 
-  if (maiorQue10 && arroba && incluiPonto) {
-    inserirMensagem()
-
-  } else {
+  if (maiorQue10 && arroba && incluiPonto) inserirMensagem()
+  else {
     alert("Email inválido")
     input_email.focus()
   }
@@ -57,24 +51,66 @@ function validacaoEmail(email_validacao) {
 function inserirMensagem(status) {
 
   if (status) {
-    label.style = "background-color: #ff5555; color: #fff; padding: 5px 10px; border-radius: 8px;"
+    container_checkbox.style = "background: rgb(248,113,113, 0.7);color: #fff;"
+    label.style = "color: #f00; font-size: 14px; display: block;"
+    
     label.innerText = "Você precisa aceitar os termos de uso"
 
   } else {
-    label.style = "background-color: #4cec5a; color: #fff; padding: 5px 10px; border-radius: 8px;"
+    container_checkbox.style = "background: none; color: rgb(107 114 128);"
+    label.style = "background-color: #4ec257; color: #fff; padding: 5px 10px; border-radius: 8px; font-size: 14px; text-align: center; display: block;"
+
     label.innerText = `Email "${email}" cadastrado com sucesso!`
 
+    //sumir a mensagem depois de 7 segundos
     setTimeout(() => {
       label.style = "display: none;"
-
     }, 7 * 1000)
   }
 
-  /**
-   * recebe dois parâmetros:
-   * 1: o elemento que você quer adicionar
-   * 2: vai ser uma âncora no qual o elemento vai se basear para ser inserido à cima
-   */
-  pai.insertBefore(label, btn_enviar)
-
+  container_checkbox.append(label)
 }
+
+// ====== LISTAGEM DOS CARDS
+const container_pai = document.getElementById("container")
+
+const url = "https://62d0e2051cc14f8c088fc83d.mockapi.io/produto?aluno=maxwell"
+
+class Card {
+  constructor(titulo, descricao, imagem, id) {
+    this.imagem = imagem
+    this.descricao = descricao
+    this.titulo = titulo
+    this.id = id
+  }
+
+  create() {
+    const card = document.createElement("div")
+    card.className = "card" //estilos tailwind
+
+    card.innerHTML = `
+      <img src="${this.imagem}" alt="${this.titulo}">
+      <div class="content">
+        <h3 class="title-card">${this.titulo}</h3>
+        <p>${this.descricao}</p>
+
+        <a href="detalhes.html?id=${this.id}">Detalhes</a>
+      </div>
+    `
+    container_pai.appendChild(card)
+  }
+}
+
+async function pegarDoces() {
+  const response = await fetch(url)
+  const data = await response.json()
+
+  return await data
+}
+
+pegarDoces().then(data => {
+  data.map(doce => {
+    const CARD = new Card(doce.titulo, doce.descricao, doce.imagem, doce.id)
+    CARD.create()
+  })
+})
