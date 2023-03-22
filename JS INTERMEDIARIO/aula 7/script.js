@@ -17,5 +17,4 @@ function preencher(carro){
   lista.appendChild(item);
 
   item.innerHTML = carro.montadora + " " + carro.modelo;
-
 }

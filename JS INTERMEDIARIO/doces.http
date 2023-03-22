@@ -1,0 +1,10 @@
+POST https://62d0e2051cc14f8c088fc83d.mockapi.io/produto
+content-type: application/json
+
+
+{
+  "aluno": "maxwell",
+  "imagem": "https://images.unsplash.com/photo-1546549095-5d8bc3c37ffa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDV8fERPQ0V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+  "titulo": "Copo da felicidade",
+  "descricao": " Copos regados de tudo que é mais gostoso: cookie, brownie, brigadeiro, doce de leite, gotas de chocolate, bombom, tudo a depender do cliente. Impossível não ser feliz com tanta doçura, né?"
+}
