@@ -14,7 +14,7 @@ input_email.onchange = (event) => {
 
 btn_enviar.onclick = () => {
 
-  if (!input_email.value && checkbox.checked) {
+  if (!input_email.value && !checkbox.checked) {
     resposta = prompt("Por favor, preencha o email")
 
     if (!resposta) {
@@ -22,6 +22,7 @@ btn_enviar.onclick = () => {
       input_email.focus()
 
     } else {
+      validacaoEmail(email)
       email = resposta
       input_email.value = email      
     }
@@ -37,11 +38,28 @@ function validacaoEmail(email_validacao) {
   const arroba = email_validacao.includes("@")
   const arrobaPosicao = email_validacao.indexOf("@")
 
+  let quant_arroba = 0  
+
+  for(letra of email_validacao){
+    if(letra == '@') quant_arroba++
+  }
+
+  const check_quant_arroba = quant_arroba > 1
+
+  
   // essa variável existe, pois o email, pode conter pontos antes do @, ex: max.coding@gmail.com, e o includes procura o primeiro carácter que condiz com a validação. Então esse "dominio" procura ponto só após o arroba. (no domínio)
   const dominio = email_validacao.substring(arrobaPosicao, email_validacao.length) //recorte de tudo depois do arroba
   const incluiPonto = dominio.includes(".")
+  
+  if (maiorQue10 && arroba && incluiPonto) {
+    
+    if(check_quant_arroba) {
+      alert(`O email só pode conter 1 '@', esse email tem ${quant_arroba}`)
+      input_email.focus()
+    }
 
-  if (maiorQue10 && arroba && incluiPonto) inserirMensagem()
+    else inserirMensagem()
+  }
   else {
     alert("Email inválido")
     input_email.focus()

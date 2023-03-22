@@ -8,13 +8,13 @@ div.style = `
   top: 80px;
   color: #fff;
   font-weight: 600;
-  font-size: 25px;
+  font-size: 32px;
   text-align: center;
   background-color: #ffb95a;
   max-width: 400px;
   width: 100%;
   padding: 10px 0px;
-  // border-radius: 10px;
+  border-radius: 4px;
   filter: drop-shadow(2px 2px 1px rgba(0,0,0,0.1));
 `
 
@@ -26,7 +26,7 @@ function cronometro() {
   const dif_segundos = formatar(60 - agora.getSeconds())
 
   div.innerHTML = `
-    <span class="block text-lg text-[#0e3996]">
+    <span class="block text-lg">
       Ofertas válidas por:
     </span>
     ${dif_horas}:${dif_minutos}:${dif_segundos}
