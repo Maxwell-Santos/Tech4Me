@@ -19,8 +19,6 @@ async function pegarDoces() {
   return await data
 }
 
-numeros.map(num => num * 2).reduce((prev, curr) => prev + curr, 0)
-
 pegarDoces().then(doce => {
   img.src = doce.imagem
   titulo.innerText = doce.titulo

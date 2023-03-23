@@ -18,7 +18,7 @@ btn_enviar.onclick = () => {
     resposta = prompt("Por favor, preencha o email")
 
     if (!resposta) {
-      alert("Preenche logo ai") // msg de erro
+      alert("Precisamos que coloque seu email, para você receber os melhores descontos 😄") // msg de erro
       input_email.focus()
 
     } else {
@@ -38,13 +38,11 @@ function validacaoEmail(email_validacao) {
   const arroba = email_validacao.includes("@")
   const arrobaPosicao = email_validacao.indexOf("@")
 
-  let quant_arroba = 0  
+  let quant_arroba = 0
 
   for(letra of email_validacao){
     if(letra == '@') quant_arroba++
   }
-
-  const check_quant_arroba = quant_arroba > 1
 
   
   // essa variável existe, pois o email, pode conter pontos antes do @, ex: max.coding@gmail.com, e o includes procura o primeiro carácter que condiz com a validação. Então esse "domínio" procura ponto só após o arroba. (no domínio)
@@ -53,7 +51,7 @@ function validacaoEmail(email_validacao) {
   
   if (maiorQue10 && arroba && incluiPonto) {
     
-    if(check_quant_arroba) {
+    if(quant_arroba > 1) {
       alert(`O email só pode conter 1 '@', esse email tem ${quant_arroba}`)
       input_email.focus()
     }
@@ -70,13 +68,13 @@ function inserirMensagem(status) {
 
   if (status) {
     container_checkbox.style = "background: rgb(248,113,113, 0.7);color: #fff;"
-    label.style = "color: #f00; font-size: 14px; display: block;"
+    label.style = "color: #f00; font-size: 14px;"
     
     label.innerText = "Você precisa aceitar os termos de uso"
 
   } else {
     container_checkbox.style = "background: none; color: rgb(107 114 128);"
-    label.style = "background-color: #4ec257; color: #fff; padding: 5px 10px; border-radius: 8px; font-size: 14px; text-align: center; display: block;"
+    label.style = "background-color: #4ec257; color: #fff; padding: 5px 10px; border-radius: 8px; font-size: 14px; text-align: center;"
 
     label.innerText = `Email "${email}" cadastrado com sucesso!`
 
