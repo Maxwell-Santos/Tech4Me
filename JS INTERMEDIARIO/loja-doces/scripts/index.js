@@ -2,7 +2,6 @@ const container = document.getElementById("intro")
 
 const div = document.createElement("div")
 
-//como uso o tailwind, o estilo é feio por className
 div.style = `
   position: absolute;
   top: 80px;
@@ -22,7 +21,7 @@ function cronometro() {
   const agora = new Date()
 
   const dif_horas = formatar(23 - agora.getHours())
-  const dif_minutos = formatar(60 - agora.getMinutes())
+  const dif_minutos = formatar(59 - agora.getMinutes())
   const dif_segundos = formatar(60 - agora.getSeconds())
 
   div.innerHTML = `

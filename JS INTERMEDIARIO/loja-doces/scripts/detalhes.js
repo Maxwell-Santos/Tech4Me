@@ -10,16 +10,16 @@ img.classList.add("hover:scale-125", "transition-all", "ease", "duration-700", "
 
 img_container.appendChild(img)
 
-const urlParams = new URLSearchParams(window.location.search)
-const id_produto = urlParams.get("id")
-
+const urlParams = window.location.search
+const id_produto = urlParams.substring(urlParams.indexOf("=") + 1, urlParams.length)
 
 async function pegarDoces() {
   const response = await fetch(`https://62d0e2051cc14f8c088fc83d.mockapi.io/produto/${id_produto}`)
   const data = await response.json()
-
   return await data
 }
+
+numeros.map(num => num * 2).reduce((prev, curr) => prev + curr, 0)
 
 pegarDoces().then(doce => {
   img.src = doce.imagem

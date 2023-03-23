@@ -47,7 +47,7 @@ function validacaoEmail(email_validacao) {
   const check_quant_arroba = quant_arroba > 1
 
   
-  // essa variável existe, pois o email, pode conter pontos antes do @, ex: max.coding@gmail.com, e o includes procura o primeiro carácter que condiz com a validação. Então esse "dominio" procura ponto só após o arroba. (no domínio)
+  // essa variável existe, pois o email, pode conter pontos antes do @, ex: max.coding@gmail.com, e o includes procura o primeiro carácter que condiz com a validação. Então esse "domínio" procura ponto só após o arroba. (no domínio)
   const dominio = email_validacao.substring(arrobaPosicao, email_validacao.length) //recorte de tudo depois do arroba
   const incluiPonto = dominio.includes(".")
   
