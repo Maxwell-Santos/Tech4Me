@@ -90,7 +90,7 @@ function inserirMensagem(status) {
 // ====== LISTAGEM DOS CARDS
 const container_pai = document.getElementById("container")
 
-const url = "https://62d0e2051cc14f8c088fc83d.mockapi.io/produto?aluno=maxwell"
+const url = "https://641cf247b556e431a878fb78.mockapi.io/produto?aluno=maxwell"
 
 class Card {
   constructor(titulo, descricao, imagem, id) {

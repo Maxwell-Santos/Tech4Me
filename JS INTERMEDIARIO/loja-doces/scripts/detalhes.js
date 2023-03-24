@@ -14,7 +14,7 @@ const urlParams = window.location.search
 const id_produto = urlParams.substring(urlParams.indexOf("=") + 1, urlParams.length)
 
 async function pegarDoces() {
-  const response = await fetch(`https://62d0e2051cc14f8c088fc83d.mockapi.io/produto/${id_produto}`)
+  const response = await fetch(`https://641cf247b556e431a878fb78.mockapi.io/produto/${id_produto}`)
   const data = await response.json()
   return await data
 }

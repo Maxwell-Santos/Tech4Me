@@ -1,10 +1,42 @@
-POST https://62d0e2051cc14f8c088fc83d.mockapi.io/produto
+POST https://641cf247b556e431a878fb78.mockapi.io/produto
 content-type: application/json
 
+{
+  "aluno": "maxwell",
+  "imagem": "https://images.unsplash.com/photo-1603532648955-039310d9ed75?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y3VwY2FrZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60s",
+  "titulo": "Cupcake",
+  "descricao": "Um pequeno bolo que causa grandes sensações deliciosas. Recheadíssimo com diversos sabores entre brigadeiro, ninho, Ferrero Rocher e trufado."
+}
+
+###
+POST https://641cf247b556e431a878fb78.mockapi.io/produto
+content-type: application/json
+
+{
+  "aluno": "maxwell",
+  "imagem": "https://images.unsplash.com/photo-1558326567-98ae2405596b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=759&q=80",
+  "titulo": "Macaroon",
+  "descricao": "Diretamente da França, este biscoito de massa crocante por fora e macia por dentro promete adoçar sua vida. Colorido e saboroso, é acompanhado por sabores como maracujá, blueberry, lavanda, abacaxi e chocolate, a depender da cor. Bon Appétit!"
+}
+
+###
+POST https://641cf247b556e431a878fb78.mockapi.io/produto
+content-type: application/json
 
 {
   "aluno": "maxwell",
   "imagem": "https://images.unsplash.com/photo-1546549095-5d8bc3c37ffa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDV8fERPQ0V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
   "titulo": "Copo da felicidade",
-  "descricao": " Copos regados de tudo que é mais gostoso: cookie, brownie, brigadeiro, doce de leite, gotas de chocolate, bombom, tudo a depender do cliente. Impossível não ser feliz com tanta doçura, né?"
+  "descricao": "Copos regados de tudo que é mais gostoso: cookie, brownie, brigadeiro, doce de leite, gotas de chocolate, bombom, tudo a depender do cliente. Impossível não ser feliz com tanta doçura, né?"
+}
+
+###
+POST https://641cf247b556e431a878fb78.mockapi.io/produto
+content-type: application/json
+
+{
+  "aluno": "maxwell",
+  "imagem": "https://images.unsplash.com/photo-1630953899906-d16511a72558?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YnJpZ2FkZWlyb3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+  "titulo": "Brigadeiro",
+  "descricao": "Deliciosa massa de chocolate enrolada e confeitada, pronta para ser comida! Temos também brigadeiro de morango e ninho."
 }
