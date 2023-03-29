@@ -43,7 +43,6 @@ function validacaoEmail(email_validacao) {
   for(letra of email_validacao){
     if(letra == '@') quant_arroba++
   }
-
   
   // essa variável existe, pois o email, pode conter pontos antes do @, ex: max.coding@gmail.com, e o includes procura o primeiro carácter que condiz com a validação. Então esse "domínio" procura ponto só após o arroba. (no domínio)
   const dominio = email_validacao.substring(arrobaPosicao, email_validacao.length) //recorte de tudo depois do arroba
@@ -90,8 +89,6 @@ function inserirMensagem(status) {
 // ====== LISTAGEM DOS CARDS
 const container_pai = document.getElementById("container")
 
-const url = "https://641cf247b556e431a878fb78.mockapi.io/produto?aluno=maxwell"
-
 class Card {
   constructor(titulo, descricao, imagem, id) {
     this.imagem = imagem
@@ -117,6 +114,8 @@ class Card {
   }
 }
 
+const url = "https://641cf247b556e431a878fb78.mockapi.io/produto?aluno=maxwell"
+
 async function pegarDoces() {
   const response = await fetch(url)
   const data = await response.json()
@@ -126,7 +125,9 @@ async function pegarDoces() {
 
 pegarDoces().then(data => {
   data.map(doce => {
-    const CARD = new Card(doce.titulo, doce.descricao, doce.imagem, doce.id)
-    CARD.create()
+    if(doce.id != 14){ // erro na api, a api cria um id novo sem eu ter feito o post
+      const CARD = new Card(doce.titulo, doce.descricao, doce.imagem, doce.id)
+      CARD.create()
+    }
   })
 })
