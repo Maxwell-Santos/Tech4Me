@@ -24,7 +24,7 @@ btn_enviar.onclick = () => {
     } else {
       validacaoEmail(email)
       email = resposta
-      input_email.value = email      
+      input_email.value = email
     }
   }
 
@@ -40,17 +40,17 @@ function validacaoEmail(email_validacao) {
 
   let quant_arroba = 0
 
-  for(letra of email_validacao){
-    if(letra == '@') quant_arroba++
+  for (letra of email_validacao) {
+    if (letra == '@') quant_arroba++
   }
-  
+
   // essa variável existe, pois o email, pode conter pontos antes do @, ex: max.coding@gmail.com, e o includes procura o primeiro carácter que condiz com a validação. Então esse "domínio" procura ponto só após o arroba. (no domínio)
   const dominio = email_validacao.substring(arrobaPosicao, email_validacao.length) //recorte de tudo depois do arroba
   const incluiPonto = dominio.includes(".")
-  
+
   if (maiorQue10 && arroba && incluiPonto) {
-    
-    if(quant_arroba > 1) {
+
+    if (quant_arroba > 1) {
       alert(`O email só pode conter 1 '@', esse email tem ${quant_arroba}`)
       input_email.focus()
     }
@@ -68,7 +68,7 @@ function inserirMensagem(status) {
   if (status) {
     container_checkbox.style = "background: rgb(248,113,113, 0.7);color: #fff;"
     label.style = "color: #f00; font-size: 14px;"
-    
+
     label.innerText = "Você precisa aceitar os termos de uso"
 
   } else {
@@ -116,18 +116,16 @@ class Card {
 
 const url = "https://641cf247b556e431a878fb78.mockapi.io/produto?aluno=maxwell"
 
-async function pegarDoces() {
-  const response = await fetch(url)
-  const data = await response.json()
-
-  return await data
+function pegarDoces() {
+  fetch(url)
+    .then(response => response.json())
+    .then(data => {
+      data.map(doce => {
+        if (doce.id != 14) { // erro na api, a api cria um id novo sem eu ter feito o post
+          const CARD = new Card(doce.titulo, doce.descricao, doce.imagem, doce.id)
+          CARD.create()
+        }
+      })
+    })
 }
-
-pegarDoces().then(data => {
-  data.map(doce => {
-    if(doce.id != 14){ // erro na api, a api cria um id novo sem eu ter feito o post
-      const CARD = new Card(doce.titulo, doce.descricao, doce.imagem, doce.id)
-      CARD.create()
-    }
-  })
-})
+pegarDoces()
