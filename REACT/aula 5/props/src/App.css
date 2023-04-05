@@ -1,0 +1,51 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.filme:hover {
+  cursor: pointer;
+}
+.active {
+  background-color: #8F43EE;
+}
+.active:hover {
+  background-color: #6e25c9;
+}
+.desactived {
+  background-color: rgba(128, 128, 128, 0.185);
+}
+.desactived:hover {
+  background-color: rgba(128, 128, 128, 0.7);
+
+}
+
+.filme {
+  transition: all ease .3s;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin: 10px 0px;
+  width: 500px;
+}
+.filme h3{
+  line-height: 10px;
+}
+.filme .name{
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
