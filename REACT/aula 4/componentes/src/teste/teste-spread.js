@@ -8,6 +8,4 @@ carro.lancamentos = [ 2010 ,...carro.lancamentos]
 
 console.log(carro)
 
-
 //spread na função
-
