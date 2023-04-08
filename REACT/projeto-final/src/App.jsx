@@ -1,33 +1,27 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Cartao from "./Cartao"
 
 function App() {
-  const [count, setCount] = useState(0)
+  const produtos = [
+    {
+      titulo: "Macaron",
+      info: "Diretamente da França, este biscoito de massa crocante por fora e macia por dentro promete adoçar sua vida. Colorido e saboroso, é acompanhado por sabores como maracujá, blueberry, lavanda, abacaxi e chocolate, a depender da cor. Bon Appétit!",
+    },
+    {
+      titulo: "Copo da felicidade",
+      info: "Copos regados de tudo que é mais gostoso: cookie, brownie, brigadeiro, doce de leite, gotas de chocolate, bombom, tudo a depender do cliente. Impossível não ser feliz com tanta doçura, né?"
+    }
+  ]
 
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div>
+      <h1>Produtos</h1>
+      <div className="flex gap-3">
+        {
+          produtos.map(produto => (
+            <Cartao key={produto.titulo} titulo={produto.titulo} info={produto.info}/>
+          ))
+        }
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </div>
   )
 }

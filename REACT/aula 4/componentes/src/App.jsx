@@ -1,8 +1,17 @@
+import {ArrayFrutas} from './praticando-juntos/ArrayFrutas'
+import { Entregues } from './atividade/Entregues'
+import { Recebidas } from './atividade/Recebidas'
+import { Transporte } from './atividade/Transporte'
 function App() {
 
   return (
     <div className="App">
       <Readme />
+      <ArrayFrutas />
+
+      <Entregues />
+      <Recebidas />
+      <Transporte />
     </div>
   )
 }
