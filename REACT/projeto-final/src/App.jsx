@@ -1,29 +1,45 @@
+import React from "react"
 import Cartao from "./Cartao"
 
-function App() {
-  const produtos = [
-    {
-      titulo: "Macaron",
-      info: "Diretamente da França, este biscoito de massa crocante por fora e macia por dentro promete adoçar sua vida. Colorido e saboroso, é acompanhado por sabores como maracujá, blueberry, lavanda, abacaxi e chocolate, a depender da cor. Bon Appétit!",
-    },
-    {
-      titulo: "Copo da felicidade",
-      info: "Copos regados de tudo que é mais gostoso: cookie, brownie, brigadeiro, doce de leite, gotas de chocolate, bombom, tudo a depender do cliente. Impossível não ser feliz com tanta doçura, né?"
-    }
-  ]
+class App extends React.Component {
+  constructor(props) {
+    super(props)
 
-  return (
-    <>
-      <h1 className="font-black text-title-primary drop-shadow-sm text-5xl py-2 mb-5 text-center">Produtos</h1>
-      <div className="flex gap-3">
+    this.state = { doces: [] }
+  }
+
+  componentDidMount() {
+    const url = "http://localhost:3000/doces"
+
+    fetch(url)
+      .then(response => response.json())
+      .then(data => this.setState({ doces: data }))
+      .catch(error => console.error(error))
+  }
+
+  render() {
+    const doces = this.state.doces
+
+    return (
+      <main className="mb-32">
+        <h1 className="font-black text-title-primary drop-shadow-sm text-5xl py-2 mb-5 text-center">
+          Produtos
+        </h1>
+
         {
-          produtos.map(produto => (
-            <Cartao key={produto.titulo} titulo={produto.titulo} info={produto.info}/>
-          ))
+          doces.length > 0 ? (
+            <ul className="flex gap-3 flex-wrap p-5">
+              {
+                doces.map(produto => (
+                  <Cartao key={produto.id} doce={produto} />
+                ))
+              }
+            </ul>
+          ) : <span className="text-center block mt-10">Carregando...</span>
         }
-      </div>
-    </>
-  )
+      </main>
+    )
+  }
 }
 
 export default App

@@ -6,4 +6,14 @@
   body{
     @apply bg-primary font-Poppins text-black/80
   }
+
+  img {
+    @apply w-full h-full object-cover
+  }
+}
+
+@layer components {
+  .img-card {
+    @apply h-[300px]
+  }
 }
