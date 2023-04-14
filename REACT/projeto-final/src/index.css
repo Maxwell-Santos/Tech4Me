@@ -4,6 +4,6 @@
 
 @layer base {
   body{
-    @apply bg-primary font-Poppins
+    @apply bg-primary font-Poppins text-black/80
   }
 }

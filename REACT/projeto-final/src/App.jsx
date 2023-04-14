@@ -13,8 +13,8 @@ function App() {
   ]
 
   return (
-    <div>
-      <h1>Produtos</h1>
+    <>
+      <h1 className="font-black text-title-primary drop-shadow-sm text-5xl py-2 mb-5 text-center">Produtos</h1>
       <div className="flex gap-3">
         {
           produtos.map(produto => (
@@ -22,7 +22,7 @@ function App() {
           ))
         }
       </div>
-    </div>
+    </>
   )
 }
 
