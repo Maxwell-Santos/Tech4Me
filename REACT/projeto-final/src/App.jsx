@@ -28,7 +28,7 @@ class App extends React.Component {
 
         {
           doces.length > 0 ? (
-            <ul className="flex gap-3 flex-wrap p-5">
+            <ul className="flex gap-3 flex-wrap p-5 justify-center">
               {
                 doces.map(produto => (
                   <Cartao key={produto.id} doce={produto} />
