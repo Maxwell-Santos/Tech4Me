@@ -1,4 +1,4 @@
-import './cartao.css'
+// import './cartao.css'
 
 function Cartao({doce}){
 
