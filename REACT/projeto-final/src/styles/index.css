@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-primary font-Poppins text-black/80
+  }
+  img {
+    @apply w-full h-full object-cover
+  }
+  section {
+    @apply p-5
+  }
+
+  h1, h2 {
+    @apply font-black text-title-secondary drop-shadow-sm text-5xl py-2 mb-5 text-center
+  }
+  h3 {
+    @apply font-black text-title-primary drop-shadow-sm text-5xl py-2 mb-5 text-center
+  }
+}
+
+@layer components {
+  .img-card {
+    @apply h-[300px]
+  }
+
+  #form-cadastrar-loja {
+    @apply grid place-items-center min-h-screen
+  }
+  .form {
+    @apply flex flex-col w-full max-w-[calc(500px+6rem)] p-10 px-12 bg-[#ffc97c] rounded-2xl shadow-sm
+  }
+
+  .form input{
+    @apply text-zinc-700 focus:outline-none w-full placeholder:font-normal
+  }
+  .form textarea {
+    @apply text-zinc-700 focus:outline-none p-2 rounded-md border border-zinc-300 bg-zinc-100 hover:ring-2 focus:ring-2 ring-offset-1 transition-all
+  }
+
+  .form .input-content {
+    @apply w-full p-2 rounded-md border border-zinc-300 bg-zinc-100 hover:ring-2 focus:ring-2 ring-offset-1 transition-all placeholder:font-normal flex items-center
+  }
+
+  .form label{
+    @apply mt-4 block text-zinc-100 first:mt-0 mb-1
+  }
+  .form small {
+    @apply text-red-700
+  }
+
+  .form button[type="submit"]{
+    @apply p-3 bg-btn hover:bg-btn-hover rounded-md mt-3 text-white font-semibold text-lg transition-all shadow-md
+  }
+}

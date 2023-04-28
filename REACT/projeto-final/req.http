@@ -1,0 +1,102 @@
+POST https://63069afec0d0f2b8011f9944.mockapi.io/produtos
+content-type: application/json
+
+{
+  "nome": "Cupcake",
+  "imagem": "https://images.unsplash.com/photo-1603532648955-039310d9ed75?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y3VwY2FrZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60s",
+  "descricao": "Um pequeno bolo que causa grandes sensações deliciosas. Recheadíssimo com diversos sabores entre brigadeiro, ninho, Ferrero Rocher e trufado.",
+  "unidade": "1 uni",
+  "preco": 9.90,
+  "loja": "Aqui Doces"
+}
+
+###
+POST https://63069afec0d0f2b8011f9944.mockapi.io/produtos
+content-type: application/json
+
+{
+  "nome": "Macaroon",
+  "imagem": "https://images.unsplash.com/photo-1558326567-98ae2405596b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=759&q=80",
+  "descricao": "Diretamente da França, este biscoito de massa crocante por fora e macia por dentro promete adoçar sua vida. Colorido e saboroso, é acompanhado por sabores como maracujá, blueberry, lavanda e abacaxi.",
+  "unidade": "35g",
+  "preco": 14.00,
+  "loja": "Aqui Doces"
+}
+
+###
+POST https://63069afec0d0f2b8011f9944.mockapi.io/produtos
+content-type: application/json
+
+{
+  "nome": "Copo da felicidade",
+  "imagem": "https://images.unsplash.com/photo-1546549095-5d8bc3c37ffa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDV8fERPQ0V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+  "descricao": "Copos regados de tudo que é mais gostoso: cookie, brownie, brigadeiro, doce de leite, gotas de chocolate, bombom, tudo a depender do cliente. Impossível não ser feliz com tanta doçura, né?",
+  "unidade": "1 uni",
+  "preco": 19.99,
+  "loja": "Aqui Doces"
+}
+
+###
+POST https://63069afec0d0f2b8011f9944.mockapi.io/produtos
+content-type: application/json
+
+{
+  "nome": "Brigadeiro",
+  "imagem": "https://images.unsplash.com/photo-1630953899906-d16511a72558?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YnJpZ2FkZWlyb3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+  "descricao": "Deliciosa massa de chocolate enrolada e confeitada, pronta para ser comida! Temos também brigadeiro de morango e ninho.",
+  "unidade": "1 uni",
+  "preco": 2.50,
+  "loja": "Aqui Doces"
+}
+
+###
+POST https://63069afec0d0f2b8011f9944.mockapi.io/produtos
+content-type: application/json
+
+{
+  "nome": "Cookie",
+  "imagem": "https://images.unsplash.com/photo-1547047803-fa4a5f94ffd2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+  "descricao": " Biscoito crocante e fresquinho com gotas de chocolate ou amêndoas. Sua redondez simboliza o ciclo que se fica após comer um: se deseja comer outro e mais outro, ficando infinitamente melhor a cada mordida.",
+  "unidade": "100g",
+  "preco": 5.00,
+  "loja": "Aqui Doces"
+}
+
+###
+POST https://63069afec0d0f2b8011f9944.mockapi.io/produtos
+content-type: application/json
+
+{
+  "nome": "Sorvete",
+  "imagem": "https://images.unsplash.com/photo-1560081223-734e568800b7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGNha2UlMjBwb3B8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+  "descricao": " Nada melhor no calor do que um sorvetinho para refrescar, né? Estes picolés prometem de energizar e refrescar, não importa quão quente esteja.",
+  "unidade": "1 uni",
+  "preco": 7.00,
+  "loja": "Aqui Doces"
+}
+
+###
+POST https://63069afec0d0f2b8011f9944.mockapi.io/produtos
+content-type: application/json
+
+{
+  "nome": "Sequilho",
+  "imagem": "https://images.unsplash.com/photo-1595397351604-cf490cc38bf1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80",
+  "descricao": "Minibiscoito que derrete na boca. Perfeito para tomar com um café quentinho ou para acompanhar um chá de fim de tarde.",
+  "unidade": "120g",
+  "preco": 6.95,
+  "loja": "Aqui Doces"
+}
+
+###
+POST https://63069afec0d0f2b8011f9944.mockapi.io/produtos
+content-type: application/json
+
+{
+  "nome": "Churros",
+  "imagem": "https://images.unsplash.com/photo-1578554813309-8196f50f6811?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8Y2h1cnJvc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+  "descricao": " Churros quentinhos, churros feitos na hora! Podem ser cobertos com amendoim ou granulado, recheados de brigadeiro ou doce de leite, e são feitos para rechear sua vida com o que há de melhor.",
+  "unidade": "1 uni",
+  "preco": 4.50,
+  "loja": "Aqui Doces"
+}

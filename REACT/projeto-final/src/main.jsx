@@ -1,10 +1,19 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App'
-import './index.css'
+import React from "react"
+import ReactDOM from "react-dom/client"
+import { BrowserRouter } from "react-router-dom"
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+import Cabecalho from "./componentes/Cabecalho"
+import Footer from "./componentes/Footer"
+import Rotas from "./Routes"
+
+import "./styles/index.css"
+
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <BrowserRouter>
+      <Cabecalho />
+      <Rotas />
+      <Footer />
+    </BrowserRouter>
+  </React.StrictMode>
 )

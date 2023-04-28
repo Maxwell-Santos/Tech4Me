@@ -1,45 +1,31 @@
-import React from "react"
-import Cartao from "./Cartao"
+import logoPng from "./assets/logo.png"
+import { Link } from "react-router-dom"
 
-class App extends React.Component {
-  constructor(props) {
-    super(props)
+function App() {
+  return (
+    <section
+      id="inicial"
+      className="min-h-[calc(100vh-50px)] flex justify-center sm:justify-evenly items-center flex-wrap"
+    >
+      <div>
+        <img
+          src={logoPng}
+          alt="logo da loja Aqui doces"
+          className="w-[400px] max-[500px]:max-w-[200px] drop-shadow-md"
+        />
+      </div>
 
-    this.state = { doces: [] }
-  }
-
-  componentDidMount() {
-    const url = "http://localhost:3000/doces"
-
-    fetch(url)
-      .then(response => response.json())
-      .then(data => this.setState({ doces: data }))
-      .catch(error => console.error(error))
-  }
-
-  render() {
-    const doces = this.state.doces
-
-    return (
-      <main className="mb-32">
-        <h1 className="font-black text-title-primary drop-shadow-sm text-5xl py-2 mb-5 text-center">
-          Produtos
-        </h1>
-
-        {
-          doces.length > 0 ? (
-            <ul className="flex gap-3 flex-wrap p-5 justify-center">
-              {
-                doces.map(produto => (
-                  <Cartao key={produto.id} doce={produto} />
-                ))
-              }
-            </ul>
-          ) : <span className="text-center block mt-10">Carregando...</span>
-        }
-      </main>
-    )
-  }
+      <div className="max-w-lg w-full">
+        <h1>Bem vindo ao Aqui Doce</h1>
+        <Link
+          to="/vitrine"
+          className="bg-btn block text-center p-4 rounded-lg text-lg uppercase font-bold text-white"
+        >
+          Vitrine
+        </Link>
+      </div>
+    </section>
+  )
 }
 
 export default App

@@ -10,15 +10,18 @@ export default {
         'Poppins': 'Poppins, sans-serif'
       },
       backgroundColor: {
-        primary: "#00b7ff45",
-        btn: "#ffb95a",
+        primary: "#daf5ff",
+        btn: "#f8ab3e",
+        "btn-hover": "#f59d23",
         card: "#ffffff"
       },
       textColor: {
         "title-primary": "#ffffff",
         "btn-text": "#ffffff",
         "title-secondary": "#357ab3",
-        "title-card": "#f8ab3e"
+        "title-card": "#f8ab3e",
+        "nav-link-hover": "#f8ab3e",
+        "price-card": "#f8ab3e",
       }
     },
   },
