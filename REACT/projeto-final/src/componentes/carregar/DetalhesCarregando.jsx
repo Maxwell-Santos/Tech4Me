@@ -1,7 +1,6 @@
-import React from "react"
 import "../../styles/carregando.css"
 
-export function DetalhesCarregando() {
+export default function DetalhesCarregando() {
   return (
     <div className="shimmer bg-zinc-100 flex items-center justify-center gap-8 flex-wrap p-5 min-[430px]:rounded-2xl">
       <div className="bg-zinc-300 w-[350px] h-[350px] rounded-xl"></div>

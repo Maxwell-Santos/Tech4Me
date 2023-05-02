@@ -1,28 +1,59 @@
 import { useState } from "react"
 import { Voltar } from "../componentes/VoltarBtn"
 
+import IconeUsuario from "../componentes/form/IconeUsuario"
+import IconeEmail from "../componentes/form/IconeEmail"
+import IconeLimparInput from "../componentes/form/IconeLimparInput"
+import IconeLimparForm from "../componentes/form/IconeLimparForm"
+import IconeEnviar from "../componentes/form/IconeEnviar"
+
 export default function Form() {
   const [nome, setNome] = useState("")
   const [email, setEmail] = useState("")
   const [feedback, setFeedback] = useState("")
+  const [enviado, setEnviado] = useState(false)
 
   const cadastrarLoja = data => {
-    const url = "https://641cf247b556e431a878fb78.mockapi.io/produto?" //api ultima prova js 
-    
-    fetch("https://63069afec0d0f2b8011f9944.mockapi.io/produtos/loja-cadastro", {
-      method : "POST",
+    const url = "https://641cf247b556e431a878fb78.mockapi.io/cadastrar" //api ultima prova js
+
+    fetch(url, {
+      method: "POST",
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(data)
+
+    }).then(data => {
+      setEnviado(true)
+      limparInputs(true)
     })
 
     console.log(data)
   }
 
-  function handleSubmit(event) {
+  const handleSubmit = event => {
     event.preventDefault()
     cadastrarLoja({ nome, email, feedback })
+  }
+
+  const limparInputs = padraoForm => {
+    if (!padraoForm) {
+      const confimarLimpeza = confirm(
+        "Deseja realmente limpar os campos? Essa ação não tem volta!"
+      )
+
+      if (confimarLimpeza) {
+        setNome("")
+        setEmail("")
+        setFeedback("")
+      }
+      return
+    }
+    setNome("")
+    setEmail("")
+    setFeedback("")
+
+    setTimeout(() => setEnviado(false), 3 * 1000)
   }
 
   return (
@@ -34,21 +65,23 @@ export default function Form() {
 
         <label htmlFor="nome">Nome</label>
         <div className="input-content">
+          <IconeUsuario />
           <input
             type="text"
             name="nome"
             id="nome"
-            placeholder="ex: Maxwell"
+            placeholder="insira seu nome"
             value={nome}
             onChange={event => setNome(event.target.value)}
             required
             title="campo de input do nome"
           />
-          {nome && <ClearInput setValue={setNome} />}
+          {nome && <IconeLimparInput setValue={setNome} />}
         </div>
 
         <label htmlFor="email">Email</label>
         <div className="input-content">
+          <IconeEmail />
           <input
             type="email"
             name="email"
@@ -59,7 +92,7 @@ export default function Form() {
             required
             title="campo de input do email"
           />
-          {email && <ClearInput setValue={setEmail} />}
+          {email && <IconeLimparInput setValue={setEmail} />}
         </div>
 
         <label htmlFor="feedback">Feedback</label>
@@ -74,29 +107,25 @@ export default function Form() {
           title="campo de input do feedback"
         ></textarea>
 
-        <button type="submit" title="botão de enviar formulário">
-          Enviar
-        </button>
+        <div className="action-btns">
+          <button
+            type="reset"
+            title="limpar os campos do formulário"
+            onClick={() => limparInputs()}
+          >
+            <IconeLimparForm />
+            Limpar
+          </button>
+          <button
+            type="submit"
+            className="flex-1"
+            title="botão de enviar formulário"
+          >
+            {!enviado ? 'Enviar' : 'Feedback enviado!'}
+            <IconeEnviar enviar={enviado}/>
+          </button>
+        </div>
       </form>
     </section>
-  )
-}
-
-function ClearInput({ setValue }) {
-  return (
-    <button type="button" onClick={() => setValue("")} className="text-zinc-400" title="Limpar o input">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-        fill="currentColor"
-        className="w-5 h-5"
-      >
-        <path
-          fillRule="evenodd"
-          d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm-1.72 6.97a.75.75 0 10-1.06 1.06L10.94 12l-1.72 1.72a.75.75 0 101.06 1.06L12 13.06l1.72 1.72a.75.75 0 101.06-1.06L13.06 12l1.72-1.72a.75.75 0 10-1.06-1.06L12 10.94l-1.72-1.72z"
-          clipRule="evenodd"
-        />
-      </svg>
-    </button>
   )
 }

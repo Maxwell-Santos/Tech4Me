@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
-import logo from "../assets/logo.png"
 
 import "../styles/carregando.css"
+import { formatarBRL } from "../utilidades/formatarBRL"
 
 export default function Cartao({ doce }) {
   // A api tem algum bug que a query não filtra totalmente só meus doces
@@ -18,19 +18,13 @@ export default function Cartao({ doce }) {
 
           <div className="p-6 bg-card/50 filter backdrop-blur-lg rounded-xl -translate-y-4 shadow-sm flex flex-col justify-between flex-1">
             <div>
-              <header className="flex items-center justify-between">
-                <h3 className="text-title-card text-2xl font-bold">
+                <h3 className="text-title-card text-2xl font-bold text-start truncate" title={doce.nome}>
                   {doce.nome}
                 </h3>
-                <img src={logo} alt="logo da loja Aqui Doces" className="w-6"/>
-              </header>
 
               <div className="flex items-center justify-between">
                 <span className="text-price-card font-semibold text-xl block">
-                  {doce.preco.toLocaleString("pt-BR", {
-                    style: "currency",
-                    currency: "BRL",
-                  })}
+                  {formatarBRL(doce.preco)}
                 </span>
                 <small className="text-zinc-500">{doce.unidade}</small>
               </div>

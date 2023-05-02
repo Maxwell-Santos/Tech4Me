@@ -2,7 +2,8 @@ import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
 import { Voltar } from "../componentes/VoltarBtn"
 
-import { DetalhesCarregando } from "../componentes/carregar/DetalhesCarregando"
+import DetalhesCarregando from "../componentes/carregar/DetalhesCarregando"
+import { formatarBRL } from "../utilidades/formatarBRL"
 
 export default function Detalhes() {
   const { id } = useParams()
@@ -44,16 +45,13 @@ export default function Detalhes() {
 
             <div className="mt-4 max-[430px]:text-center">
               <span className="text-price-card font-semibold text-2xl max-[430px]:text-center">
-                {produto.preco.toLocaleString("pt-BR", {
-                  style: "currency",
-                  currency: "BRL",
-                })}
+                {formatarBRL(produto.preco)}
               </span>
               <sup className="text-zinc-300 ml-2">{produto.unidade}</sup>
             </div>
 
             <button className="bg-btn hover:bg-btn-hover transition-all p-4 text-xl font-semibold px-10 mt-3 rounded-md w-full max-w-[300px] uppercase tracking-wider">
-              eu quero
+              comprar
             </button>
           </div>
         </div>

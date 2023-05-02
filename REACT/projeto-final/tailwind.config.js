@@ -22,6 +22,15 @@ export default {
         "title-card": "#f8ab3e",
         "nav-link-hover": "#f8ab3e",
         "price-card": "#f8ab3e",
+      },
+      keyframes:{
+        "enviar": {
+          '10%': {transform: 'translateX(-10px)'},
+          '100%': {transform: 'translateX(200px)'},
+        }
+      },
+      animation:{
+        "enviar-form": "enviar 1s ease"
       }
     },
   },
