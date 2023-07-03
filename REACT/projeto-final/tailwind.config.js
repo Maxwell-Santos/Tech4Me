@@ -12,6 +12,7 @@ export default {
       backgroundColor: {
         primary: "#daf5ff",
         btn: "#f8ab3e",
+        "btn-disabled": "#ebc48d",
         "btn-hover": "#f59d23",
         card: "#ffffff"
       },

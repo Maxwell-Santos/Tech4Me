@@ -14,7 +14,7 @@ export default function Form() {
   const [enviado, setEnviado] = useState(false)
 
   const cadastrarLoja = data => {
-    const url = "https://641cf247b556e431a878fb78.mockapi.io/cadastrar" //api ultima prova js
+    const url = "https://641cf247b556e431a878fb78.mockapi.io/cadastro" //api ultima prova js
 
     fetch(url, {
       method: "POST",
@@ -27,8 +27,6 @@ export default function Form() {
       setEnviado(true)
       limparInputs(true)
     })
-
-    console.log(data)
   }
 
   const handleSubmit = event => {
@@ -86,7 +84,7 @@ export default function Form() {
             type="email"
             name="email"
             id="email"
-            placeholder="ex: ex@gmail.com"
+            placeholder="exemplo@gmail.com"
             value={email}
             onChange={event => setEmail(event.target.value)}
             required
@@ -110,7 +108,7 @@ export default function Form() {
         <div className="action-btns">
           <button
             type="reset"
-            title="limpar os campos do formulário"
+            title="botão de limpar todos os campos do formulário"
             onClick={() => limparInputs()}
           >
             <IconeLimparForm />

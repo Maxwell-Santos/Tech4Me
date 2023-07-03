@@ -1,4 +1,5 @@
 import React from "react"
+import VitrineCarregando from "../componentes/carregar/VitrineCarregando"
 import Cartao from "../componentes/Cartao"
 import { Voltar } from "../componentes/VoltarBtn"
 
@@ -9,7 +10,7 @@ class Vitrine extends React.Component {
   }
 
   componentDidMount() {
-    const url = "https://63069afec0d0f2b8011f9944.mockapi.io/produtos?loja=Aqui+Doces"
+    const url = "https://63069afec0d0f2b8011f9944.mockapi.io/produtos?loja=Aqui%20Doces"
 
     fetch(url)
       .then(response => response.json())
@@ -33,7 +34,7 @@ class Vitrine extends React.Component {
             ))}
           </ul>
         ) : (
-          <span className="text-center block mt-10">Carregando...</span>
+          <VitrineCarregando />
         )}
       </section>
       </>

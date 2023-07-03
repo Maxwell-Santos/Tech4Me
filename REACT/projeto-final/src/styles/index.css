@@ -12,12 +12,11 @@
   section {
     @apply p-5
   }
-
   h1, h2 {
     @apply font-black text-title-secondary drop-shadow-sm text-5xl py-2 mb-5 text-center
   }
   h3 {
-    @apply font-black text-title-primary drop-shadow-sm text-5xl py-2 mb-5 text-center
+    @apply font-black text-title-primary drop-shadow-sm text-5xl py-2 text-center
   }
 }
 
@@ -30,7 +29,7 @@
     @apply grid place-items-center min-h-screen
   }
   .form {
-    @apply flex flex-col w-full max-w-[calc(500px+6rem)] p-5 sm:p-10 rounded-2xl shadow-sm
+    @apply flex flex-col w-full max-w-[calc(500px+6rem)] p-5 sm:p-10 rounded-2xl
   }
 
   .form input{
@@ -40,8 +39,12 @@
     @apply text-zinc-700 focus:outline-none p-2 rounded-md border border-zinc-300 bg-zinc-50 hover:ring-2 focus:ring-2 ring-offset-1 transition-all
   }
 
-  .form .input-content {
-    @apply w-full p-2 rounded-md border border-zinc-300 bg-zinc-50 hover:ring-2 focus:ring-2 ring-offset-1 transition-all placeholder:font-normal flex items-center
+  /* estilizando o pai input-content se o filho  input estiver em foco*/
+  .form .input-content:has(input:focus){
+    @apply ring-2 ring-offset-1 transition-all
+  }
+  .form .input-content{
+    @apply w-full p-2 rounded-md border border-zinc-300 bg-zinc-50 hover:ring-2 ring-offset-1 transition-all placeholder:font-normal flex items-center
   }
 
   .form label{
@@ -60,5 +63,17 @@
 
   .form button[type="submit"]{
     @apply flex items-center justify-center gap-3 p-3 bg-btn hover:bg-btn-hover rounded-md text-white font-semibold transition-all shadow-md
+  }
+
+
+  /* PÁGINA DETALHES */
+  .btn-quant-action{
+    @apply bg-btn hover:bg-btn-hover transition-all p-2 px-4 rounded-md disabled:bg-btn-disabled
+  }
+
+
+  /* sessão estranha que apareceu no código */
+  #shadow-host-companion{
+    @apply p-0 m-0
   }
 }

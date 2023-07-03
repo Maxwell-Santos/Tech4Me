@@ -11,17 +11,17 @@ function App() {
         <img
           src={logoPng}
           alt="logo da loja Aqui doces"
-          className="w-[400px] max-[500px]:max-w-[200px] drop-shadow-md"
+          className="w-[300px] max-[500px]:max-w-[200px] drop-shadow-md"
         />
       </div>
 
       <div className="max-w-lg w-full">
-        <h1>Bem vindo ao Aqui Doce</h1>
+        <h1 className="text-7xl leading-[100%] tracking-tighter">Bem vindo ao <br /><span className="uppercase text-title-card">Aqui Doce</span></h1>
         <Link
           to="/vitrine"
-          className="bg-btn block text-center p-4 rounded-lg text-lg uppercase font-bold text-white"
+          className="bg-btn block text-center p-4 rounded-lg text-2xl uppercase font-bold text-white"
         >
-          Vitrine
+          Ver os doces
         </Link>
       </div>
     </section>

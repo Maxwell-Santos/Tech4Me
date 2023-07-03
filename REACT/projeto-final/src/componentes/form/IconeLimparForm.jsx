@@ -2,8 +2,8 @@ export default function IconeLimparForm(){
   return(
     <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
+    width="20"
+    height="20"
     fill="rgb(220, 38, 38, .8)"
     viewBox="0 0 256 256"
   >

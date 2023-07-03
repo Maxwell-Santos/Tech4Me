@@ -34,6 +34,7 @@ export default function Cartao({ doce }) {
               <Link
                 to={`/detalhes/${doce.id}`}
                 className="block text-center bg-btn hover:bg-btn-hover transition-all text-btn-text mt-3 p-3 rounded-lg font-semibold text-lg"
+                title={"link para mais informações do doce: " + doce.nome}
               >
                 Ver mais
               </Link>
